@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  /* ─── Color palette ──────────────────────────────────────────────────────── */
+  --color-canvas: #0a0a0a;
+  --color-surface: #111111;
+  --color-surface-2: #1a1a1a;
+  --color-line: #262626;
+  --color-line-subtle: #1c1c1c;
+  --color-fg: #fafafa;
+  --color-muted: #888888;
+  --color-muted-2: #555555;
+
+  /* Amber accent */
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+  --color-amber-600: #d97706;
+
+  /* Semantic */
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+
+  /* ─── Typography ─────────────────────────────────────────────────────────── */
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "Cascadia Code", monospace;
+
+  /* ─── Spacing / layout ───────────────────────────────────────────────────── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+}
+
+/* ─── Base resets ──────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100dvh;
+}
+
+/* ─── Focus styles ─────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-amber-500);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ─── Selection ────────────────────────────────────────────────────────────── */
+::selection {
+  background-color: var(--color-amber-500);
+  color: #000;
+}
+
+/* ─── Scrollbar (subtle dark) ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-2);
+}
+
+/* ─── Typography utilities ─────────────────────────────────────────────────── */
+.text-display {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+.text-headline {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.text-subhead {
+  font-size: clamp(1.1rem, 2vw, 1.375rem);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+
+/* ─── Section spacing ──────────────────────────────────────────────────────── */
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section-lg {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container {
+  max-width: 56rem; /* 5xl = 896px */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── Amber rule divider ───────────────────────────────────────────────────── */
+.rule-amber {
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background-color: var(--color-amber-500);
+  margin-bottom: 1.5rem;
+}
+
+/* ─── Prose-ish body text ──────────────────────────────────────────────────── */
+.prose-contractor p {
+  color: var(--color-muted);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  max-width: 65ch;
+  margin-bottom: 1.25rem;
+}
+
+.prose-contractor p:last-child {
+  margin-bottom: 0;
+}
