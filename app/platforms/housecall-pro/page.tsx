@@ -181,9 +181,12 @@ export default function HousecallProPage() {
               <p className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-3">
                 Don&apos;t Have Housecall Pro Yet?
               </p>
-              <p className="text-muted text-sm leading-relaxed mb-5">
-                If you&apos;re evaluating Housecall Pro, the link below includes
-                a referral parameter. We&apos;re a PartnerStack partner for HCP.
+              <p className="text-muted text-xs mb-4">
+                <span className="font-bold">Affiliate disclosure:</span> We are
+                a PartnerStack affiliate for Housecall Pro and may earn a
+                commission if you sign up through the link below, at no
+                additional cost to you. We are not an official or authorized
+                Housecall Pro partner.
               </p>
               <a
                 href={siteConfig.affiliateLinks.housecallPro}
@@ -193,11 +196,6 @@ export default function HousecallProPage() {
               >
                 Learn More About Housecall Pro →
               </a>
-              <p className="mt-4 text-muted-2 text-xs">
-                Disclosure: We may earn a referral commission at no additional
-                cost to you. We are not an official, certified, or authorized
-                Housecall Pro partner.
-              </p>
             </div>
           </div>
         </section>

@@ -182,9 +182,11 @@ export default function JobberPage() {
               <p className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-3">
                 Don&apos;t Have Jobber Yet?
               </p>
-              <p className="text-muted text-sm leading-relaxed mb-5">
-                If you&apos;re evaluating Jobber, the link below includes a
-                referral parameter. We&apos;re a PartnerStack partner for Jobber.
+              <p className="text-muted text-xs mb-4">
+                <span className="font-bold">Affiliate disclosure:</span> We are
+                a PartnerStack affiliate for Jobber and may earn a commission if
+                you sign up through the link below, at no additional cost to
+                you. We are not an official or authorized Jobber partner.
               </p>
               <a
                 href={siteConfig.affiliateLinks.jobber}
@@ -194,11 +196,6 @@ export default function JobberPage() {
               >
                 Learn More About Jobber →
               </a>
-              <p className="mt-4 text-muted-2 text-xs">
-                Disclosure: We may earn a referral commission at no additional
-                cost to you. We are not an official, certified, or authorized
-                Jobber partner.
-              </p>
             </div>
           </div>
         </section>

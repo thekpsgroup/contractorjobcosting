@@ -45,8 +45,9 @@ export const siteConfig = {
   // PartnerStack referral links for Jobber and Housecall Pro.
   // Set to empty string "" to remove the referral block from a platform page.
   affiliateLinks: {
-    jobber: "https://go.getjobber.com/fgq3a1l0ag8t",
-    housecallPro: "https://housecallpro.partnerlinks.io/thekpsgroup",
+    // sid1 SubID tells PartnerStack which page drove the conversion (dashboard analytics)
+    jobber: "https://go.getjobber.com/fgq3a1l0ag8t?sid1=jobber-page",
+    housecallPro: "https://housecallpro.partnerlinks.io/thekpsgroup?sid1=hcp-page",
     // QuickBooks — direct link only (The KPS Group holds QuickBooks ProAdvisor Gold status)
     quickbooks: "https://quickbooks.intuit.com/",
   },
