@@ -21,17 +21,17 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://contractorjobcosting.com",
 
   // ─── Contact (update these before launch) ──────────────────────────────────
-  phone: "(555) 000-0000",
-  phoneHref: "tel:+15550000000",
-  email: "hello@contractorjobcosting.com",
+  phone: "(469) 534-3392",
+  phoneHref: "tel:+14695343392",
+  email: "sales@thekpsgroup.com",
 
   // ─── Booking link ──────────────────────────────────────────────────────────
   // Replace with your Calendly, Cal.com, or other scheduling URL
-  bookingUrl: "https://calendly.com/placeholder/30min",
+  bookingUrl: "https://calendly.com/thekpsgroup/30min",
 
   // ─── Form notification (set via NOTIFICATION_EMAIL env var on Vercel) ──────
   notificationEmail:
-    process.env.NOTIFICATION_EMAIL ?? "hello@contractorjobcosting.com",
+    process.env.NOTIFICATION_EMAIL ?? "sales@thekpsgroup.com",
 
   // ─── Analytics ─────────────────────────────────────────────────────────────
   // Set NEXT_PUBLIC_GA_ID in Vercel env vars to enable Google Analytics

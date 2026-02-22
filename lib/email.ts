@@ -97,7 +97,7 @@ export async function sendContactEmail(
   const subjectCompany = company ? ` — ${company}` : "";
 
   await resend.emails.send({
-    from: "Contact Form <noreply@contractorjobcosting.com>",
+    from: "Contractor Job Costing <sales@thekpsgroup.com>",
     to: siteConfig.notificationEmail,
     replyTo: email,
     subject: `New inquiry from ${name}${subjectCompany}`,
