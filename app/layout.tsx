@@ -75,6 +75,8 @@ export const metadata: Metadata = {
     description: siteConfig.description,
   },
 
+  themeColor: "#0a0a0a",
+
   robots: {
     index: true,
     follow: true,
@@ -168,6 +170,7 @@ export default function RootLayout({
       <head>
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <meta name="format-detection" content="telephone=no" />
+        <meta name="color-scheme" content="dark" />
         {/* ── Geo / local SEO ──────────────────────────────────────────── */}
         <meta name="geo.region" content="US-TX" />
         <meta name="geo.placename" content="Dallas, Texas" />

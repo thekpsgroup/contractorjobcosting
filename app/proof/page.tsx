@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -350,6 +351,30 @@ export default function ProofPage() {
             data, and owner + ops lead on weekly calls. Results vary. We don&apos;t
             guarantee specific financial outcomes.
           </p>
+        </div>
+      </section>
+
+      {/* ── Bridge to Offer ──────────────────────────────────────────────── */}
+      <section className="section border-b border-line">
+        <div className="container flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
+          <div>
+            <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-3">
+              See What&apos;s Included
+            </p>
+            <h2 className="text-fg font-bold text-2xl mb-2">
+              Ready to see the full offer?
+            </h2>
+            <p className="text-muted text-sm max-w-md">
+              Four deliverables. Fixed scope. 30 days. See exactly what we
+              build, what we need from you, and what it costs to start.
+            </p>
+          </div>
+          <Link
+            href="/offer"
+            className="shrink-0 inline-block border border-amber-500 text-amber-500 font-bold text-sm tracking-wide px-8 py-4 hover:bg-amber-500/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas whitespace-nowrap"
+          >
+            See the Full Offer →
+          </Link>
         </div>
       </section>
 

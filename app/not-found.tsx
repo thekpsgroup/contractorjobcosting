@@ -37,11 +37,13 @@ export default function NotFound() {
           </Link>
         </div>
 
-        <div className="border-t border-line pt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="border-t border-line pt-12 grid grid-cols-2 sm:grid-cols-3 gap-4">
           {[
             { href: "/offer", label: "The Offer" },
-            { href: "/proof", label: "Proof" },
+            { href: "/proof", label: "Outcomes" },
             { href: "/about", label: "About" },
+            { href: "/platforms/jobber", label: "Jobber" },
+            { href: "/platforms/housecall-pro", label: "Housecall Pro" },
             { href: "/platforms/quickbooks", label: "QuickBooks" },
           ].map(({ href, label }) => (
             <Link

@@ -209,6 +209,7 @@ export default function HomePage() {
                       aria-hidden="true"
                     >
                       <svg
+                        className="text-amber-500"
                         width="10"
                         height="10"
                         viewBox="0 0 10 10"
@@ -216,7 +217,7 @@ export default function HomePage() {
                       >
                         <path
                           d="M2 5l2 2 4-4"
-                          stroke="#f59e0b"
+                          stroke="currentColor"
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -258,7 +259,7 @@ export default function HomePage() {
                       >
                         <path
                           d="M3 3l4 4M7 3l-4 4"
-                          stroke="#555"
+                          stroke="currentColor"
                           strokeWidth="1.5"
                           strokeLinecap="round"
                         />
@@ -352,7 +353,7 @@ export default function HomePage() {
           >
             Book a Call
           </a>
-          <p className="mt-4 text-black/60 text-xs">
+          <p className="mt-4 text-black/75 text-xs">
             No pitch deck. No sales pressure. Just a conversation.
           </p>
         </div>

@@ -25,7 +25,7 @@ export function ContactForm() {
       <div
         role="status"
         aria-live="polite"
-        className="border border-[var(--color-success)] bg-[var(--color-success)]/5 p-8"
+        className="border border-success bg-success/5 p-8"
       >
         <div className="flex items-start gap-4">
           <svg
@@ -33,7 +33,7 @@ export function ContactForm() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            className="text-[var(--color-success)] shrink-0 mt-0.5"
+            className="text-success shrink-0 mt-0.5"
             aria-hidden="true"
           >
             <path
@@ -58,7 +58,7 @@ export function ContactForm() {
 
   if (state.status === "rate_limited") {
     return (
-      <div role="alert" className="border border-[var(--color-error)] bg-[var(--color-error)]/5 p-6">
+      <div role="alert" className="border border-error bg-error/5 p-6">
         <p className="text-fg font-bold text-sm mb-1">Too many submissions.</p>
         <p className="text-muted text-sm">
           Please wait 15 minutes before submitting again, or reach us directly by phone or email.
@@ -74,9 +74,9 @@ export function ContactForm() {
         <div
           role="alert"
           aria-live="assertive"
-          className="mb-6 border border-[var(--color-error)] bg-[var(--color-error)]/5 p-4"
+          className="mb-6 border border-error bg-error/5 p-4"
         >
-          <p className="text-[var(--color-error)] text-sm font-medium">
+          <p className="text-error text-sm font-medium">
             {state.message}
           </p>
         </div>
@@ -95,7 +95,7 @@ export function ContactForm() {
               name="name"
               required
               autoComplete="name"
-              className="w-full bg-surface border border-[var(--color-line)] text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
+              className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
               placeholder="Your name"
             />
           </div>
@@ -108,7 +108,7 @@ export function ContactForm() {
               id="company"
               name="company"
               autoComplete="organization"
-              className="w-full bg-surface border border-[var(--color-line)] text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
+              className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
               placeholder="Business name"
             />
           </div>
@@ -126,7 +126,7 @@ export function ContactForm() {
               name="email"
               required
               autoComplete="email"
-              className="w-full bg-surface border border-[var(--color-line)] text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
+              className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
               placeholder="you@company.com"
             />
           </div>
@@ -139,7 +139,7 @@ export function ContactForm() {
               id="phone"
               name="phone"
               autoComplete="tel"
-              className="w-full bg-surface border border-[var(--color-line)] text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
+              className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
               placeholder="(555) 000-0000"
             />
           </div>
@@ -155,7 +155,7 @@ export function ContactForm() {
             name="message"
             required
             rows={5}
-            className="w-full bg-surface border border-[var(--color-line)] text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors resize-y min-h-[120px]"
+            className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors resize-y min-h-[120px]"
             placeholder="Tell us briefly about your business and what you're trying to solve."
           />
         </div>

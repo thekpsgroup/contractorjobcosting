@@ -277,10 +277,10 @@ export default function OfferPage() {
                       className="mt-1 w-5 h-5 shrink-0 bg-amber-500/10 border border-amber-500/30 flex items-center justify-center"
                       aria-hidden="true"
                     >
-                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <svg className="text-amber-500" width="10" height="10" viewBox="0 0 10 10" fill="none">
                         <path
                           d="M2 5l2 2 4-4"
-                          stroke="#f59e0b"
+                          stroke="currentColor"
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"

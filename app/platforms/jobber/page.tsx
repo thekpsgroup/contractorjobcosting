@@ -23,8 +23,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
-    { "@type": "ListItem", position: 2, name: "Platforms", item: `${siteConfig.siteUrl}/platforms/jobber` },
-    { "@type": "ListItem", position: 3, name: "Jobber", item: `${siteConfig.siteUrl}/platforms/jobber` },
+    { "@type": "ListItem", position: 2, name: "Jobber", item: `${siteConfig.siteUrl}/platforms/jobber` },
   ],
 };
 
@@ -127,10 +126,10 @@ export default function JobberPage() {
                       className="mt-1 w-4 h-4 shrink-0 bg-amber-500/10 border border-amber-500/30 flex items-center justify-center"
                       aria-hidden="true"
                     >
-                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                      <svg className="text-amber-500" width="8" height="8" viewBox="0 0 8 8" fill="none">
                         <path
                           d="M1.5 4l1.5 1.5 3.5-3.5"
-                          stroke="#f59e0b"
+                          stroke="currentColor"
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"
