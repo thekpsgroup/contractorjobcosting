@@ -36,7 +36,7 @@ export default function AboutPage() {
     <>
       <JsonLd data={aboutPageSchema} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
-      <section className="section-lg border-b border-[var(--color-line)]">
+      <section className="section-lg border-b border-line">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-6">
             About
@@ -51,7 +51,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Story ────────────────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)]">
+      <section className="section border-b border-line">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div className="prose-contractor">
@@ -91,7 +91,7 @@ export default function AboutPage() {
               <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-6">
                 What We Are — and Are Not
               </p>
-              <div className="flex flex-col gap-0 divide-y divide-[var(--color-line)]">
+              <div className="flex flex-col gap-0 divide-y divide-line">
                 {[
                   {
                     label: "We are",
@@ -137,7 +137,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Who We Work With ──────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)] bg-surface">
+      <section className="section border-b border-line bg-surface">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
             Who We Work With
@@ -176,9 +176,9 @@ export default function AboutPage() {
       </section>
 
       {/* ── Legal Attribution ────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)]">
+      <section className="section border-b border-line">
         <div className="container">
-          <div className="border border-[var(--color-line)] p-8 max-w-2xl">
+          <div className="border border-line p-8 max-w-2xl">
             <p className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-4">
               Legal Attribution
             </p>

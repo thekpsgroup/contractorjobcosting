@@ -44,7 +44,7 @@ export default function HomePage() {
     <>
       <JsonLd data={homePageSchema} />
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="section-lg border-b border-[var(--color-line)]">
+      <section className="section-lg border-b border-line">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-6">
             30-Day Install · Fixed Scope · Real Numbers
@@ -79,7 +79,7 @@ export default function HomePage() {
       </section>
 
       {/* ── The Problem ──────────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)]">
+      <section className="section border-b border-line">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
             The Problem
@@ -120,7 +120,7 @@ export default function HomePage() {
       </section>
 
       {/* ── What We Do ───────────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)] bg-surface">
+      <section className="section border-b border-line bg-surface">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
             What We Do
@@ -133,7 +133,7 @@ export default function HomePage() {
             exactly what you&apos;re getting before we start.
           </p>
 
-          <div className="flex flex-col gap-0 divide-y divide-[var(--color-line)]">
+          <div className="flex flex-col gap-0 divide-y divide-line">
             {[
               {
                 label: "Deliverable 1",
@@ -185,7 +185,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Who It's For ─────────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)]">
+      <section className="section border-b border-line">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
@@ -247,7 +247,7 @@ export default function HomePage() {
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span
-                      className="mt-1 w-4 h-4 shrink-0 bg-[var(--color-line)] border border-[var(--color-line)] flex items-center justify-center"
+                      className="mt-1 w-4 h-4 shrink-0 bg-line border border-line flex items-center justify-center"
                       aria-hidden="true"
                     >
                       <svg
@@ -276,7 +276,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Proof Teaser ─────────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)] bg-surface">
+      <section className="section border-b border-line bg-surface">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
             Typical Outcomes
@@ -310,7 +310,7 @@ export default function HomePage() {
             ].map(({ stat, detail }) => (
               <div
                 key={stat}
-                className="border border-[var(--color-line)] p-6 bg-canvas"
+                className="border border-line p-6 bg-canvas"
               >
                 <p className="text-fg font-bold text-lg mb-2">{stat}</p>
                 <p className="text-muted text-sm leading-relaxed">{detail}</p>

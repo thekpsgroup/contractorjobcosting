@@ -35,7 +35,7 @@ export default function ContactPage() {
     <>
       <JsonLd data={contactPageSchema} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
-      <section className="section-lg border-b border-[var(--color-line)]">
+      <section className="section-lg border-b border-line">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-6">
             Contact
@@ -51,7 +51,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── Contact grid ─────────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)]">
+      <section className="section border-b border-line">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             {/* Left — direct contact */}
@@ -80,7 +80,7 @@ export default function ContactPage() {
               </div>
 
               {/* Phone */}
-              <div className="flex flex-col gap-6 divide-y divide-[var(--color-line)]">
+              <div className="flex flex-col gap-6 divide-y divide-line">
                 <div className="pt-0">
                   <p className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-2">
                     Phone

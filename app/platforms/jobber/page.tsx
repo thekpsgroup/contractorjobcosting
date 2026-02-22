@@ -33,7 +33,7 @@ export default function JobberPage() {
     <>
       <JsonLd data={breadcrumbSchema} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
-      <section className="section-lg border-b border-[var(--color-line)]">
+      <section className="section-lg border-b border-line">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-6">
             Platform · Jobber
@@ -50,7 +50,7 @@ export default function JobberPage() {
       </section>
 
       {/* ── Jobber context ───────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)]">
+      <section className="section border-b border-line">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
@@ -100,7 +100,7 @@ export default function JobberPage() {
       </section>
 
       {/* ── What we configure / don't ────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)] bg-surface">
+      <section className="section border-b border-line bg-surface">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
@@ -163,7 +163,7 @@ export default function JobberPage() {
                     className="flex items-start gap-3 text-muted-2 text-sm leading-relaxed"
                   >
                     <span
-                      className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--color-line)] shrink-0"
+                      className="mt-1.5 w-1.5 h-1.5 rounded-full bg-line shrink-0"
                       aria-hidden="true"
                     />
                     {item}
@@ -177,9 +177,9 @@ export default function JobberPage() {
 
       {/* ── Referral ─────────────────────────────────────────────────────── */}
       {siteConfig.affiliateLinks.jobber && (
-        <section className="section border-b border-[var(--color-line)]">
+        <section className="section border-b border-line">
           <div className="container">
-            <div className="border border-[var(--color-line)] p-8 max-w-2xl">
+            <div className="border border-line p-8 max-w-2xl">
               <p className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-3">
                 Don&apos;t Have Jobber Yet?
               </p>

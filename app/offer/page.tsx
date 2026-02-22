@@ -145,7 +145,7 @@ export default function OfferPage() {
       <JsonLd data={[serviceSchema, faqSchema]} />
 
       {/* ── Header ─────────────────────────────────────────────────────── */}
-      <section className="section-lg border-b border-[var(--color-line)]">
+      <section className="section-lg border-b border-line">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-6">
             Fixed Scope · Fixed Price · 30 Days
@@ -177,7 +177,7 @@ export default function OfferPage() {
       </section>
 
       {/* ── Deliverables ─────────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)]">
+      <section className="section border-b border-line">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
             What You Get
@@ -186,7 +186,7 @@ export default function OfferPage() {
             Four deliverables. No scope creep.
           </h2>
 
-          <div className="flex flex-col gap-0 divide-y divide-[var(--color-line)]">
+          <div className="flex flex-col gap-0 divide-y divide-line">
             {[
               {
                 number: "01",
@@ -247,7 +247,7 @@ export default function OfferPage() {
       </section>
 
       {/* ── Requirements ─────────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)] bg-surface">
+      <section className="section border-b border-line bg-surface">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
@@ -313,7 +313,7 @@ export default function OfferPage() {
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 border-b border-[var(--color-line)] pb-5 last:border-0 last:pb-0"
+                    className="flex items-start gap-3 border-b border-line pb-5 last:border-0 last:pb-0"
                   >
                     <span
                       className="mt-1.5 w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"
@@ -333,9 +333,9 @@ export default function OfferPage() {
       </section>
 
       {/* ── Optional Managed Service ──────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)]">
+      <section className="section border-b border-line">
         <div className="container">
-          <div className="border border-[var(--color-line)] p-8 md:p-12 max-w-3xl">
+          <div className="border border-line p-8 md:p-12 max-w-3xl">
             <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-3">
               Optional — After the Install
             </p>
@@ -359,7 +359,7 @@ export default function OfferPage() {
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)] bg-surface">
+      <section className="section border-b border-line bg-surface">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
             Common Questions
@@ -368,7 +368,7 @@ export default function OfferPage() {
             Straightforward answers.
           </h2>
 
-          <div className="flex flex-col gap-0 divide-y divide-[var(--color-line)]">
+          <div className="flex flex-col gap-0 divide-y divide-line">
             {faqs.map(({ question, answer }) => (
               <div key={question} className="py-8">
                 <h3 className="text-fg font-bold text-lg mb-3">{question}</h3>

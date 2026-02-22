@@ -34,7 +34,7 @@ export default function QuickBooksPage() {
     <>
       <JsonLd data={breadcrumbSchema} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
-      <section className="section-lg border-b border-[var(--color-line)]">
+      <section className="section-lg border-b border-line">
         <div className="container">
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
             <div>
@@ -61,7 +61,7 @@ export default function QuickBooksPage() {
                 className="w-32 lg:w-40"
                 priority
               />
-              <p className="text-muted-2 text-xs max-w-[160px] lg:text-right">
+              <p className="text-muted-2 text-xs max-w-40 lg:text-right">
                 The KPS Group holds QuickBooks ProAdvisor Gold status.
               </p>
             </div>
@@ -70,7 +70,7 @@ export default function QuickBooksPage() {
       </section>
 
       {/* ── ProAdvisor credentials ───────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)] bg-surface">
+      <section className="section border-b border-line bg-surface">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
             Our QuickBooks Credentials
@@ -78,7 +78,7 @@ export default function QuickBooksPage() {
           <h2 className="text-headline text-fg mb-8 max-w-xl">
             ProAdvisor Gold. We work inside QB files every day.
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-[var(--color-line)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-line">
             {[
               {
                 heading: "QuickBooks ProAdvisor Gold",
@@ -103,7 +103,7 @@ export default function QuickBooksPage() {
       </section>
 
       {/* ── QB context ───────────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)]">
+      <section className="section border-b border-line">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
@@ -154,7 +154,7 @@ export default function QuickBooksPage() {
       </section>
 
       {/* ── What we configure ────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)] bg-surface">
+      <section className="section border-b border-line bg-surface">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
@@ -217,7 +217,7 @@ export default function QuickBooksPage() {
                     className="flex items-start gap-3 text-muted-2 text-sm leading-relaxed"
                   >
                     <span
-                      className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--color-line)] shrink-0"
+                      className="mt-1.5 w-1.5 h-1.5 rounded-full bg-line shrink-0"
                       aria-hidden="true"
                     />
                     {item}
@@ -230,7 +230,7 @@ export default function QuickBooksPage() {
       </section>
 
       {/* ── QB Subscription Provisioning ─────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)]">
+      <section className="section border-b border-line">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
             Starting Fresh with QuickBooks?
@@ -275,7 +275,7 @@ export default function QuickBooksPage() {
             ].map(({ product, tiers, note }) => (
               <div
                 key={product}
-                className="border border-[var(--color-line)] bg-surface p-6"
+                className="border border-line bg-surface p-6"
               >
                 <div className="flex items-start justify-between gap-2 mb-3">
                   <h3 className="text-fg font-bold text-base leading-snug">{product}</h3>
@@ -316,9 +316,9 @@ export default function QuickBooksPage() {
       </section>
 
       {/* ── Messy books note ─────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)] bg-surface">
+      <section className="section border-b border-line bg-surface">
         <div className="container">
-          <div className="border border-[var(--color-line)] p-8 max-w-2xl">
+          <div className="border border-line p-8 max-w-2xl">
             <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-3">
               A Note on Book Condition
             </p>
@@ -337,7 +337,7 @@ export default function QuickBooksPage() {
       </section>
 
       {/* ── ProAdvisor badge section ──────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)]">
+      <section className="section border-b border-line">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
             <div className="flex flex-col gap-6">
@@ -359,7 +359,7 @@ export default function QuickBooksPage() {
                 </p>
               </div>
             </div>
-            <div className="border border-[var(--color-line)] p-8">
+            <div className="border border-line p-8">
               <p className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-3">
                 QuickBooks.com
               </p>

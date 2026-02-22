@@ -37,7 +37,7 @@ export default function NotFound() {
           </Link>
         </div>
 
-        <div className="border-t border-[var(--color-line)] pt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="border-t border-line pt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
           {[
             { href: "/offer", label: "The Offer" },
             { href: "/proof", label: "Proof" },

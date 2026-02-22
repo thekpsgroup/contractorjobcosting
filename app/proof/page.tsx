@@ -71,7 +71,7 @@ export default function ProofPage() {
     <>
       <JsonLd data={outcomeListSchema} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
-      <section className="section-lg border-b border-[var(--color-line)]">
+      <section className="section-lg border-b border-line">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-6">
             Typical Outcomes
@@ -92,13 +92,13 @@ export default function ProofPage() {
       </section>
 
       {/* ── Case Vignettes ───────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)]">
+      <section className="section border-b border-line">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-12">
             Scenario Examples
           </p>
 
-          <div className="flex flex-col gap-0 divide-y divide-[var(--color-line)]">
+          <div className="flex flex-col gap-0 divide-y divide-line">
             {/* Vignette 1 */}
             <article className="py-12">
               <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 md:gap-12">
@@ -152,7 +152,7 @@ export default function ProofPage() {
                     ].map(({ metric, value }) => (
                       <div
                         key={metric}
-                        className="border border-[var(--color-line)] p-4 bg-surface"
+                        className="border border-line p-4 bg-surface"
                       >
                         <p className="text-muted-2 text-xs uppercase tracking-wider mb-1">
                           {metric}
@@ -219,7 +219,7 @@ export default function ProofPage() {
                     ].map(({ metric, value }) => (
                       <div
                         key={metric}
-                        className="border border-[var(--color-line)] p-4 bg-surface"
+                        className="border border-line p-4 bg-surface"
                       >
                         <p className="text-muted-2 text-xs uppercase tracking-wider mb-1">
                           {metric}
@@ -289,7 +289,7 @@ export default function ProofPage() {
                     ].map(({ metric, value }) => (
                       <div
                         key={metric}
-                        className="border border-[var(--color-line)] p-4 bg-surface"
+                        className="border border-line p-4 bg-surface"
                       >
                         <p className="text-muted-2 text-xs uppercase tracking-wider mb-1">
                           {metric}
@@ -306,7 +306,7 @@ export default function ProofPage() {
       </section>
 
       {/* ── Outcome Summary ───────────────────────────────────────────────── */}
-      <section className="section border-b border-[var(--color-line)] bg-surface">
+      <section className="section border-b border-line bg-surface">
         <div className="container">
           <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
             Across All Engagements
@@ -336,7 +336,7 @@ export default function ProofPage() {
             ].map(({ heading, body }) => (
               <div
                 key={heading}
-                className="border border-[var(--color-line)] p-8 bg-canvas"
+                className="border border-line p-8 bg-canvas"
               >
                 <h3 className="text-fg font-bold text-lg mb-3">{heading}</h3>
                 <p className="text-muted text-sm leading-relaxed">{body}</p>
