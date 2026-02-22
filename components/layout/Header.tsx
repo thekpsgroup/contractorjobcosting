@@ -22,7 +22,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--color-line)] bg-canvas/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-line bg-canvas/95 backdrop-blur-sm">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -120,7 +120,7 @@ export function Header() {
       {/* Mobile nav */}
       {mobileOpen && (
         <nav
-          className="md:hidden border-t border-[var(--color-line)] bg-surface"
+          className="md:hidden border-t border-line bg-surface"
           aria-label="Mobile navigation"
         >
           <div className="px-6 py-4 flex flex-col gap-1">
@@ -130,7 +130,7 @@ export function Header() {
                 <Link
                   key={href}
                   href={href}
-                  className={`py-3 text-sm font-medium border-b border-[var(--color-line-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-sm ${
+                  className={`py-3 text-sm font-medium border-b border-line-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-sm ${
                     active ? "text-amber-500" : "text-muted hover:text-fg"
                   }`}
                   onClick={() => setMobileOpen(false)}

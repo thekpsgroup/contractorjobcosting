@@ -18,7 +18,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[var(--color-line)] bg-surface mt-auto">
+    <footer className="border-t border-line bg-surface mt-auto">
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand column */}
@@ -48,7 +48,7 @@ export function Footer() {
           </div>
 
           {/* Nav column */}
-          <div>
+          <nav aria-label="Site pages">
             <p className="text-fg text-xs font-bold tracking-widest uppercase mb-4">
               Pages
             </p>
@@ -64,25 +64,27 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Platforms column */}
+          {/* Platforms + Contact column */}
           <div>
-            <p className="text-fg text-xs font-bold tracking-widest uppercase mb-4">
-              Platforms
-            </p>
-            <ul className="flex flex-col gap-2.5">
-              {platformLinks.map(({ href, label }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className="text-muted text-sm hover:text-fg transition-colors"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <nav aria-label="Platform integrations">
+              <p className="text-fg text-xs font-bold tracking-widest uppercase mb-4">
+                Platforms
+              </p>
+              <ul className="flex flex-col gap-2.5">
+                {platformLinks.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      className="text-muted text-sm hover:text-fg transition-colors"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
             <div className="mt-8">
               <p className="text-fg text-xs font-bold tracking-widest uppercase mb-4">
                 Contact
@@ -110,7 +112,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-[var(--color-line)] pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div className="border-t border-line pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <p className="text-muted-2 text-xs">
             &copy; {currentYear} {siteConfig.legalAttribution}
           </p>

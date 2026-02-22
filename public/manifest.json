@@ -1,0 +1,20 @@
+{
+  "name": "Contractor Job Costing",
+  "short_name": "CJC",
+  "description": "Job costing and cash flow implementation for owner-led contractors. Fixed-scope 30-day install.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

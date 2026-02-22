@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 export const metadata: Metadata = {
   title: "Job Costing for QuickBooks Users — QuickBooks ProAdvisor Gold",
   description:
-    "The KPS Group holds QuickBooks ProAdvisor Gold status. We configure job costing inside your QuickBooks file, and we can provision and manage QBO, QB Payments, QB Payroll, and QB Time for your business.",
+    "QuickBooks ProAdvisor Gold firm. We configure job costing inside your QB file and can provision and manage QBO, QB Payments, QB Payroll, and QB Time.",
   alternates: {
     canonical: `${siteConfig.siteUrl}/platforms/quickbooks`,
   },
@@ -106,9 +106,9 @@ export default function QuickBooksPage() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
                 The QuickBooks Reality
-              </p>
+              </h2>
               <p className="text-muted text-sm leading-relaxed mb-6">
                 QuickBooks Online has job costing built in — class tracking,
                 project costing, Job Profitability Detail reports. These
@@ -124,9 +124,9 @@ export default function QuickBooksPage() {
               </p>
             </div>
             <div>
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
                 Common Patterns We See
-              </p>
+              </h2>
               <ul className="flex flex-col gap-4">
                 {[
                   "Job costing is enabled but most expenses are coded to overhead, not jobs",
@@ -157,9 +157,9 @@ export default function QuickBooksPage() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
                 Job Costing — What We Configure
-              </p>
+              </h2>
               <p className="text-muted text-sm leading-relaxed mb-6">
                 We work directly inside your QuickBooks file:
               </p>
@@ -197,9 +197,9 @@ export default function QuickBooksPage() {
             </div>
 
             <div>
-              <p className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-4">
+              <h2 className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-4">
                 What We Don&apos;t Do
-              </p>
+              </h2>
               <p className="text-muted text-sm leading-relaxed mb-6">
                 Clear scope boundaries for the job costing install:
               </p>

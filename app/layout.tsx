@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Header } from "@/components/layout/Header";
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   category: "Business Services",
 
   title: {
-    default: "Contractor Job Costing — 30-Day Install for Owner-Led Contractors",
+    default: "Contractor Job Costing — 30-Day Install",
     template: "%s | Contractor Job Costing",
   },
   description: siteConfig.description,
@@ -65,17 +65,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.siteUrl,
     siteName: siteConfig.name,
-    title: "Contractor Job Costing — 30-Day Install for Owner-Led Contractors",
+    title: "Contractor Job Costing — 30-Day Install",
     description: siteConfig.description,
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Contractor Job Costing — 30-Day Install for Owner-Led Contractors",
+    title: "Contractor Job Costing — 30-Day Install",
     description: siteConfig.description,
   },
-
-  themeColor: "#0a0a0a",
 
   robots: {
     index: true,
@@ -96,11 +94,15 @@ export const metadata: Metadata = {
   }),
 };
 
+export const viewport: Viewport = {
+  themeColor: "#0a0a0a",
+};
+
 // ── Structured data ───────────────────────────────────────────────────────────
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["ProfessionalService", "LocalBusiness"],
   "@id": `${siteConfig.siteUrl}/#organization`,
   name: "Contractor Job Costing",
   alternateName: "CJC",
@@ -115,9 +117,23 @@ const organizationSchema = {
   serviceType: ["Job Costing", "Cash Flow Management", "Business Financial Systems"],
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Dallas",
+    streetAddress: "2342 FM 36, Suite A",
+    addressLocality: "Caddo Mills",
     addressRegion: "TX",
+    postalCode: "75135",
     addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 33.0565,
+    longitude: -96.2279,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: siteConfig.phone,
+    email: siteConfig.email,
+    contactType: "sales",
+    availableLanguage: "English",
   },
   image: `${siteConfig.siteUrl}/opengraph-image`,
   areaServed: {
@@ -147,6 +163,12 @@ const organizationSchema = {
       "@type": "Organization",
       name: "Intuit",
     },
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "17:00",
   },
   sameAs: [
     ...(siteConfig.social.linkedin ? [siteConfig.social.linkedin] : []),
@@ -178,11 +200,17 @@ export default function RootLayout({
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <meta name="format-detection" content="telephone=no" />
         <meta name="color-scheme" content="dark" />
+        {/* ── PWA / home screen ────────────────────────────────────────── */}
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="CJC" />
         {/* ── Geo / local SEO ──────────────────────────────────────────── */}
         <meta name="geo.region" content="US-TX" />
-        <meta name="geo.placename" content="Dallas, Texas" />
-        <meta name="geo.position" content="32.7767;-96.7970" />
-        <meta name="ICBM" content="32.7767, -96.7970" />
+        <meta name="geo.placename" content="Caddo Mills, Texas" />
+        <meta name="geo.position" content="33.0565;-96.2279" />
+        <meta name="ICBM" content="33.0565, -96.2279" />
         {/* ── Resource hints ───────────────────────────────────────────── */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />

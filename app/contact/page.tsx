@@ -41,7 +41,7 @@ export default function ContactPage() {
             Contact
           </p>
           <h1 className="text-display text-fg mb-6 max-w-2xl">
-            Get in touch.
+            Contact Contractor Job Costing
           </h1>
           <p className="text-subhead text-muted max-w-xl">
             Book a call, send a message, or reach us directly. We respond to
@@ -56,9 +56,9 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             {/* Left — direct contact */}
             <div>
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-8">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-8">
                 Reach Us Directly
-              </p>
+              </h2>
 
               {/* Book a call — primary action */}
               <div className="border border-amber-500/30 bg-amber-500/5 p-6 mb-8">
@@ -125,9 +125,9 @@ export default function ContactPage() {
 
             {/* Right — form */}
             <div>
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-8">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-8">
                 Send a Message
-              </p>
+              </h2>
               <p className="text-muted text-sm mb-8 leading-relaxed">
                 Prefer to write first? Use the form below. We review every
                 message and respond within one business day.

@@ -37,6 +37,8 @@ const outcomeListSchema = {
         headline: "We had no idea which crews were profitable.",
         description:
           "An electrical contractor running four crews had flat margins despite growing revenue. After the install, per-crew job costing revealed service labor underpricing was masking losses. Gross margin on service work improved approximately 8 points within the following quarter.",
+        author: { "@type": "Organization", "@id": `${siteConfig.siteUrl}/#organization`, name: "Contractor Job Costing" },
+        datePublished: "2026-02-22",
         about: { "@id": `${siteConfig.siteUrl}/#organization` },
       },
     },
@@ -49,6 +51,8 @@ const outcomeListSchema = {
         headline: "We were invoicing 30–45 days after job completion.",
         description:
           "A residential remodeler with a strong pipeline had a cash flow problem — invoices went out 30–45 days after job completion. After implementing a milestone-based billing cadence and progress billing trigger, average invoice lag dropped from 38 days to 9 days within two billing cycles.",
+        author: { "@type": "Organization", "@id": `${siteConfig.siteUrl}/#organization`, name: "Contractor Job Costing" },
+        datePublished: "2026-02-22",
         about: { "@id": `${siteConfig.siteUrl}/#organization` },
       },
     },
@@ -61,6 +65,8 @@ const outcomeListSchema = {
         headline: "Materials losses were buried in overhead. We didn't know.",
         description:
           "An HVAC contractor saw consistently thin margins on new installations despite competitive estimates. Job costing rules requiring materials coded to specific jobs revealed field crews were pulling parts that never made it to the job cost record. Installation margins recovered without any change to pricing.",
+        author: { "@type": "Organization", "@id": `${siteConfig.siteUrl}/#organization`, name: "Contractor Job Costing" },
+        datePublished: "2026-02-22",
         about: { "@id": `${siteConfig.siteUrl}/#organization` },
       },
     },

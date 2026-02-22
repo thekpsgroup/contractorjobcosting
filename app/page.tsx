@@ -335,6 +335,55 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Platforms ─────────────────────────────────────────────────────── */}
+      <section className="section border-b border-line">
+        <div className="container">
+          <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
+            Platform Agnostic
+          </p>
+          <h2 className="text-headline text-fg mb-4 max-w-xl">
+            Works with the tools you&apos;re already using.
+          </h2>
+          <p className="text-muted text-sm mb-12 max-w-2xl">
+            We don&apos;t require software changes. We layer job costing on top
+            of your existing setup — Jobber, Housecall Pro, or QuickBooks.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-line border border-line">
+            {[
+              {
+                name: "Jobber",
+                href: "/platforms/jobber",
+                body: "Jobber runs your operations. We add the financial layer that tells you whether those operations are profitable.",
+              },
+              {
+                name: "Housecall Pro",
+                href: "/platforms/housecall-pro",
+                body: "Housecall Pro handles dispatch and invoicing. We build the job costing system that HCP doesn't provide.",
+              },
+              {
+                name: "QuickBooks",
+                href: "/platforms/quickbooks",
+                body: "QB has job costing built in. We configure it properly, write the rules, and make sure it actually gets used.",
+              },
+            ].map(({ name, href, body }) => (
+              <Link
+                key={href}
+                href={href}
+                className="block p-8 hover:bg-surface transition-colors group"
+              >
+                <h3 className="text-fg font-bold text-lg mb-3 group-hover:text-amber-500 transition-colors">
+                  {name}
+                </h3>
+                <p className="text-muted text-sm leading-relaxed mb-5">{body}</p>
+                <span className="text-amber-500 text-xs font-bold tracking-widest uppercase">
+                  How it works →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Bottom CTA Band ───────────────────────────────────────────────── */}
       <section className="bg-amber-500 py-16 px-6">
         <div className="container text-center">

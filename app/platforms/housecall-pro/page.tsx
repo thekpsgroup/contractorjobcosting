@@ -53,9 +53,9 @@ export default function HousecallProPage() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
                 What Housecall Pro Does Well
-              </p>
+              </h2>
               <p className="text-muted text-sm leading-relaxed mb-6">
                 Housecall Pro is designed for high-volume service businesses —
                 HVAC, plumbing, electrical, and similar trades that run many
@@ -70,9 +70,9 @@ export default function HousecallProPage() {
               </p>
             </div>
             <div>
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
                 Where the Gap Is
-              </p>
+              </h2>
               <ul className="flex flex-col gap-4">
                 {[
                   "HCP shows revenue and customer data. Job-level profit requires more.",
@@ -102,9 +102,9 @@ export default function HousecallProPage() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
                 What We Configure
-              </p>
+              </h2>
               <p className="text-muted text-sm leading-relaxed mb-6">
                 We build the costing layer between Housecall Pro and your
                 accounting system:
@@ -142,9 +142,9 @@ export default function HousecallProPage() {
             </div>
 
             <div>
-              <p className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-4">
+              <h2 className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-4">
                 What We Don&apos;t Do
-              </p>
+              </h2>
               <p className="text-muted text-sm leading-relaxed mb-6">
                 Clear scope boundaries:
               </p>

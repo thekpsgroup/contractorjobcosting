@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}/about`,
       lastModified: LAUNCH,
       changeFrequency: "yearly",
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${base}/contact`,
@@ -43,19 +43,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}/platforms/jobber`,
       lastModified: LAUNCH,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${base}/platforms/housecall-pro`,
       lastModified: LAUNCH,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${base}/platforms/quickbooks`,
       lastModified: LAUNCH,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
     },
   ];
 }

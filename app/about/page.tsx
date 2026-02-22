@@ -55,9 +55,9 @@ export default function AboutPage() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div className="prose-contractor">
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-6">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-6">
                 Why This Exists
-              </p>
+              </h2>
               <p>
                 The KPS Group works with owner-led businesses on the financial
                 and operational systems that let owners build something durable
@@ -88,9 +88,9 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-6">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-6">
                 What We Are — and Are Not
-              </p>
+              </h2>
               <div className="flex flex-col gap-0 divide-y divide-line">
                 {[
                   {

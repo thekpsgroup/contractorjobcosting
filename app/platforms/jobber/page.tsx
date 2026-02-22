@@ -53,9 +53,9 @@ export default function JobberPage() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
                 What Jobber Does Well
-              </p>
+              </h2>
               <p className="text-muted text-sm leading-relaxed mb-6">
                 Jobber is built for field service operations. It handles job
                 scheduling, technician dispatch, customer communication, quoting,
@@ -71,9 +71,9 @@ export default function JobberPage() {
               </p>
             </div>
             <div>
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
                 Where the Gap Is
-              </p>
+              </h2>
               <ul className="flex flex-col gap-4">
                 {[
                   "Jobber shows what you invoiced. Not what each job cost.",
@@ -103,9 +103,9 @@ export default function JobberPage() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <div>
-              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
+              <h2 className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-4">
                 What We Configure
-              </p>
+              </h2>
               <p className="text-muted text-sm leading-relaxed mb-6">
                 We work within your Jobber + accounting stack to build the
                 costing layer:
@@ -143,9 +143,9 @@ export default function JobberPage() {
             </div>
 
             <div>
-              <p className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-4">
+              <h2 className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-4">
                 What We Don&apos;t Do
-              </p>
+              </h2>
               <p className="text-muted text-sm leading-relaxed mb-6">
                 We want to be clear about scope:
               </p>
