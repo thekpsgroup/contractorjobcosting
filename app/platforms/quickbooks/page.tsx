@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Job Costing for QuickBooks Users — QuickBooks ProAdvisor Gold",
@@ -18,9 +19,20 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
+    { "@type": "ListItem", position: 2, name: "Platforms", item: `${siteConfig.siteUrl}/platforms/quickbooks` },
+    { "@type": "ListItem", position: 3, name: "QuickBooks", item: `${siteConfig.siteUrl}/platforms/quickbooks` },
+  ],
+};
+
 export default function QuickBooksPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-[var(--color-line)]">
         <div className="container">

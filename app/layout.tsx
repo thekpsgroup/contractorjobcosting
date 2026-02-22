@@ -22,15 +22,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
+
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
+
+  applicationName: siteConfig.name,
+  category: "Business Services",
+
   title: {
     default: "Contractor Job Costing — 30-Day Install for Owner-Led Contractors",
     template: "%s | Contractor Job Costing",
   },
   description: siteConfig.description,
+
   keywords: [
     "contractor job costing",
     "job costing for contractors",
@@ -39,9 +45,21 @@ export const metadata: Metadata = {
     "construction job costing",
     "trades business financial systems",
     "contractor accounting setup",
+    "QuickBooks job costing contractors",
+    "Jobber job costing",
+    "contractor profit tracking",
+    "owner-led contractor financials",
   ],
-  authors: [{ name: "The KPS Group" }],
+
+  authors: [{ name: "The KPS Group", url: siteConfig.siteUrl }],
   creator: "The KPS Group",
+  publisher: "The KPS Group",
+
+  alternates: {
+    canonical: siteConfig.siteUrl,
+    languages: { "en-US": siteConfig.siteUrl },
+  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -50,11 +68,13 @@ export const metadata: Metadata = {
     title: "Contractor Job Costing — 30-Day Install for Owner-Led Contractors",
     description: siteConfig.description,
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Contractor Job Costing — 30-Day Install for Owner-Led Contractors",
     description: siteConfig.description,
   },
+
   robots: {
     index: true,
     follow: true,
@@ -66,6 +86,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+
   ...(siteConfig.searchConsoleVerification && {
     verification: {
       google: siteConfig.searchConsoleVerification,
@@ -73,9 +94,12 @@ export const metadata: Metadata = {
   }),
 };
 
+// ── Structured data ───────────────────────────────────────────────────────────
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": `${siteConfig.siteUrl}/#organization`,
   name: "Contractor Job Costing",
   alternateName: "CJC",
   description:
@@ -84,15 +108,54 @@ const organizationSchema = {
   telephone: siteConfig.phone,
   email: siteConfig.email,
   priceRange: "$$",
+  currenciesAccepted: "USD",
+  paymentAccepted: "Invoice",
   serviceType: ["Job Costing", "Cash Flow Management", "Business Financial Systems"],
   areaServed: {
     "@type": "Country",
     name: "United States",
   },
+  knowsAbout: [
+    "Job Costing",
+    "Contractor Accounting",
+    "QuickBooks",
+    "Jobber",
+    "Housecall Pro",
+    "Cash Flow Management",
+    "Contractor Profit Margins",
+  ],
   parentOrganization: {
     "@type": "Organization",
+    "@id": "https://thekpsgroup.com/#organization",
     name: "The KPS Group",
+    url: "https://thekpsgroup.com",
   },
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    name: "QuickBooks ProAdvisor Gold",
+    credentialCategory: "Professional Certification",
+    recognizedBy: {
+      "@type": "Organization",
+      name: "Intuit",
+    },
+  },
+  sameAs: [
+    ...(siteConfig.social.linkedin ? [siteConfig.social.linkedin] : []),
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteConfig.siteUrl}/#website`,
+  name: siteConfig.name,
+  url: siteConfig.siteUrl,
+  description: siteConfig.description,
+  publisher: {
+    "@id": `${siteConfig.siteUrl}/#organization`,
+  },
+  inLanguage: "en-US",
+  copyrightYear: new Date().getFullYear(),
 };
 
 export default function RootLayout({
@@ -103,7 +166,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
-        <JsonLd data={organizationSchema} />
+        <JsonLd data={[organizationSchema, websiteSchema]} />
+        <meta name="format-detection" content="telephone=no" />
       </head>
       <body className="flex flex-col min-h-dvh">
         {/* Skip to main content — keyboard accessibility */}

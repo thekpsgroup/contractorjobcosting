@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Job Costing for Housecall Pro Users",
@@ -17,9 +18,20 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
+    { "@type": "ListItem", position: 2, name: "Platforms", item: `${siteConfig.siteUrl}/platforms/housecall-pro` },
+    { "@type": "ListItem", position: 3, name: "Housecall Pro", item: `${siteConfig.siteUrl}/platforms/housecall-pro` },
+  ],
+};
+
 export default function HousecallProPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-[var(--color-line)]">
         <div className="container">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "About — Contractor Job Costing by The KPS Group",
@@ -17,9 +18,23 @@ export const metadata: Metadata = {
   },
 };
 
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": `${siteConfig.siteUrl}/about#aboutpage`,
+  name: "About Contractor Job Costing",
+  url: `${siteConfig.siteUrl}/about`,
+  description:
+    "Contractor Job Costing is a service of The KPS Group. We work with owner-led contractors to build the job costing and cash flow systems that let owners run on real numbers.",
+  mainEntity: {
+    "@id": `${siteConfig.siteUrl}/#organization`,
+  },
+};
+
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={aboutPageSchema} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-[var(--color-line)]">
         <div className="container">

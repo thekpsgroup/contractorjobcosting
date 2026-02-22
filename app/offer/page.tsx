@@ -61,6 +61,71 @@ const faqs = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteConfig.siteUrl}/offer#service`,
+  name: "30-Day Contractor Job Costing Install",
+  description:
+    "Fixed-scope job costing and cash flow implementation for owner-led contractors. Four deliverables in 30 days: profit-per-job scoreboard, job costing rules, billing & AR cadence, and weekly profit meeting.",
+  url: `${siteConfig.siteUrl}/offer`,
+  provider: {
+    "@id": `${siteConfig.siteUrl}/#organization`,
+  },
+  serviceType: "Job Costing Implementation",
+  audience: {
+    "@type": "Audience",
+    audienceType:
+      "Owner-led contracting businesses with $750K–$8M in annual revenue",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "United States",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "30-Day Install Deliverables",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Profit-Per-Job Scoreboard",
+          description:
+            "A clean view of labor, materials, and subcontractor costs against each job with gross profit per job.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Job Costing Rules",
+          description:
+            "Written rules for what costs get coded where, who enters them, and when they are reviewed.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Billing & AR Cadence",
+          description:
+            "Invoice timing that matches job completion milestones and a collections routine.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Weekly 45-Minute Profit Meeting",
+          description:
+            "Structured weekly meeting with agenda, action tracker, owners and due dates on every item.",
+        },
+      },
+    ],
+  },
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -77,7 +142,7 @@ const faqSchema = {
 export default function OfferPage() {
   return (
     <>
-      <JsonLd data={faqSchema} />
+      <JsonLd data={[serviceSchema, faqSchema]} />
 
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-[var(--color-line)]">

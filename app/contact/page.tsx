@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/config";
 import { ContactForm } from "@/components/ui/ContactForm";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Contact — Contractor Job Costing",
@@ -17,9 +18,22 @@ export const metadata: Metadata = {
   },
 };
 
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": `${siteConfig.siteUrl}/contact#contactpage`,
+  name: "Contact Contractor Job Costing",
+  url: `${siteConfig.siteUrl}/contact`,
+  description: "Book a call, send a message, or reach us directly by phone or email.",
+  mainEntity: {
+    "@id": `${siteConfig.siteUrl}/#organization`,
+  },
+};
+
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={contactPageSchema} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-[var(--color-line)]">
         <div className="container">
