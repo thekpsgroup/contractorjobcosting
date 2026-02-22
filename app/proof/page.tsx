@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { BookCallLink } from "@/components/ui/BookCallLink";
 
 export const metadata: Metadata = {
-  title: "Outcomes — What Contractors See After the Job Costing Install",
+  title: "Job Costing Outcomes for Contractors",
   description:
-    "Real outcome examples from contractors who completed the 30-day job costing install. Margin clarity, faster invoicing, profit leak identification, and a weekly operating rhythm.",
+    "Contractor outcomes after the job costing install. Margin clarity, faster invoicing, profit leak identification, and a weekly operating rhythm.",
   alternates: {
     canonical: `${siteConfig.siteUrl}/proof`,
   },
@@ -394,14 +395,12 @@ export default function ProofPage() {
             Book a 30-minute call. We&apos;ll tell you whether the install makes
             sense for your business and what it would look like.
           </p>
-          <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <BookCallLink
+            source="proof-cta"
             className="inline-block bg-black text-white font-bold text-sm tracking-wide px-10 py-4 hover:bg-neutral-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-amber-500"
           >
             Book a Call
-          </a>
+          </BookCallLink>
         </div>
       </section>
     </>

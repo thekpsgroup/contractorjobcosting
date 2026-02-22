@@ -88,12 +88,20 @@ function escapeHtml(str: string): string {
     .replace(/'/g, "&#39;");
 }
 
+/** Strip newlines and clamp — prevents header injection in subject field. */
+function sanitizeHeader(val: string, maxLen: number): string {
+  return val.replace(/[\r\n]+/g, " ").trim().slice(0, maxLen);
+}
+
 export async function sendContactEmail(
   payload: ContactEmailPayload
 ): Promise<void> {
   const resend = getResend();
 
-  const { name, company, email } = payload;
+  const { email } = payload;
+  // Sanitize fields used in email headers (subject) — belt + suspenders on top of Zod
+  const name = sanitizeHeader(payload.name, 80);
+  const company = payload.company ? sanitizeHeader(payload.company, 120) : undefined;
   const subjectCompany = company ? ` — ${company}` : "";
 
   await resend.emails.send({

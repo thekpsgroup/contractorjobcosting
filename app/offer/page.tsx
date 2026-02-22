@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { BookCallLink } from "@/components/ui/BookCallLink";
 
 export const metadata: Metadata = {
-  title: "The 30-Day Contractor Job Costing Install",
+  title: "The 30-Day Job Costing Install",
   description:
-    "Fixed-scope, fixed-timeline job costing implementation for contractors. Four deliverables in 30 days: profit scoreboard, costing rules, billing cadence, weekly profit meeting.",
+    "Fixed-scope job costing for contractors. Four deliverables in 30 days: profit scoreboard, costing rules, billing cadence, and weekly profit meeting.",
   alternates: {
     canonical: `${siteConfig.siteUrl}/offer`,
   },
@@ -158,14 +159,12 @@ export default function OfferPage() {
             inside your business in 30 days — or we keep working until it is.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <BookCallLink
+              source="offer-hero"
               className="inline-block bg-amber-500 text-black font-bold text-sm tracking-wide px-8 py-4 hover:bg-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas text-center"
             >
               Book a Call
-            </a>
+            </BookCallLink>
             <Link
               href="/contact"
               className="inline-block border border-amber-500 text-amber-500 font-bold text-sm tracking-wide px-8 py-4 hover:bg-amber-500/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas text-center"
@@ -391,14 +390,12 @@ export default function OfferPage() {
             Book a 30-minute call. We&apos;ll confirm you&apos;re a fit and give
             you a fixed quote within 24 hours of the call.
           </p>
-          <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <BookCallLink
+            source="offer-cta"
             className="inline-block bg-black text-white font-bold text-sm tracking-wide px-10 py-4 hover:bg-neutral-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-amber-500"
           >
             Book a Call
-          </a>
+          </BookCallLink>
         </div>
       </section>
     </>

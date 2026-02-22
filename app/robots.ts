@@ -52,12 +52,11 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/",
       },
 
-      // ── SEO audit tools — rate limited (best-effort) ───────────────────
+      // ── SEO audit tools ────────────────────────────────────────────────
       {
         userAgent: ["AhrefsBot", "SemrushBot", "MJ12bot", "DotBot"],
         allow: ["/", ...allowRenderAssets],
         disallow: ["/api/", "/_next/"],
-        crawlDelay: 10,
       },
 
       // ── Everything else — standard access ──────────────────────────────

@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { BookCallLink } from "@/components/ui/BookCallLink";
 
 export const metadata: Metadata = {
-  title: "About — Contractor Job Costing by The KPS Group",
+  title: "About Contractor Job Costing",
   description:
-    "Contractor Job Costing is a service of The KPS Group. We work with owner-led contractors to build the job costing and cash flow systems that let owners run on real numbers.",
+    "Contractor Job Costing is a service of The KPS Group. We build job costing and cash flow systems for owner-led contractors to run on real numbers.",
   alternates: {
     canonical: `${siteConfig.siteUrl}/about`,
   },
@@ -209,14 +210,12 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-              <a
-                href={siteConfig.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <BookCallLink
+                source="about-cta"
                 className="inline-block bg-amber-500 text-black font-bold text-sm tracking-wide px-8 py-4 hover:bg-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas text-center"
               >
                 Book a Call
-              </a>
+              </BookCallLink>
               <Link
                 href="/contact"
                 className="inline-block border border-amber-500 text-amber-500 font-bold text-sm tracking-wide px-8 py-4 hover:bg-amber-500/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas text-center"

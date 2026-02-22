@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/config";
 import { ContactForm } from "@/components/ui/ContactForm";
+import { BookCallLink } from "@/components/ui/BookCallLink";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
@@ -69,14 +70,12 @@ export default function ContactPage() {
                   The fastest way to move forward. We keep slots available for
                   qualified contractors. 30 minutes. No pitch deck.
                 </p>
-                <a
-                  href={siteConfig.bookingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <BookCallLink
+                  source="contact-cta"
                   className="inline-block bg-amber-500 text-black font-bold text-sm tracking-wide px-6 py-3 hover:bg-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
                 >
                   Book a 30-Minute Call →
-                </a>
+                </BookCallLink>
               </div>
 
               {/* Phone */}

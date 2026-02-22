@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { BookCallLink } from "@/components/ui/BookCallLink";
 
 export const metadata: Metadata = {
   title: "Contractor Job Costing — Know Your Margin in 30 Days",
@@ -60,14 +61,12 @@ export default function HomePage() {
             on real numbers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <BookCallLink
+              source="home-hero"
               className="inline-block bg-amber-500 text-black font-bold text-sm tracking-wide px-8 py-4 hover:bg-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas text-center"
             >
               Book a Call
-            </a>
+            </BookCallLink>
             <Link
               href="/offer"
               className="inline-block border border-amber-500 text-amber-500 font-bold text-sm tracking-wide px-8 py-4 hover:bg-amber-500/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas text-center"
@@ -394,14 +393,12 @@ export default function HomePage() {
             Book a 30-minute call. We&apos;ll tell you if you&apos;re a fit, and
             if so, exactly what the install looks like for your business.
           </p>
-          <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <BookCallLink
+            source="home-cta"
             className="inline-block bg-black text-white font-bold text-sm tracking-wide px-10 py-4 hover:bg-neutral-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-amber-500"
           >
             Book a Call
-          </a>
+          </BookCallLink>
           <p className="mt-4 text-black/75 text-xs">
             No pitch deck. No sales pressure. Just a conversation.
           </p>

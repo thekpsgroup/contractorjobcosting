@@ -9,53 +9,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.siteUrl;
 
   return [
-    {
-      url: base,
-      lastModified: LAUNCH,
-      changeFrequency: "monthly",
-      priority: 1.0,
-    },
-    {
-      url: `${base}/offer`,
-      lastModified: LAUNCH,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${base}/proof`,
-      lastModified: LAUNCH,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${base}/about`,
-      lastModified: LAUNCH,
-      changeFrequency: "yearly",
-      priority: 0.8,
-    },
-    {
-      url: `${base}/contact`,
-      lastModified: LAUNCH,
-      changeFrequency: "yearly",
-      priority: 0.8,
-    },
-    {
-      url: `${base}/platforms/jobber`,
-      lastModified: LAUNCH,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${base}/platforms/housecall-pro`,
-      lastModified: LAUNCH,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${base}/platforms/quickbooks`,
-      lastModified: LAUNCH,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
+    { url: base,                               lastModified: LAUNCH },
+    { url: `${base}/offer`,                    lastModified: LAUNCH },
+    { url: `${base}/proof`,                    lastModified: LAUNCH },
+    { url: `${base}/about`,                    lastModified: LAUNCH },
+    { url: `${base}/contact`,                  lastModified: LAUNCH },
+    { url: `${base}/platforms/jobber`,         lastModified: LAUNCH },
+    { url: `${base}/platforms/housecall-pro`,  lastModified: LAUNCH },
+    { url: `${base}/platforms/quickbooks`,     lastModified: LAUNCH },
   ];
 }

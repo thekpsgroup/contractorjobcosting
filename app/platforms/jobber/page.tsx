@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { BookCallLink } from "@/components/ui/BookCallLink";
 
 export const metadata: Metadata = {
   title: "Job Costing for Jobber Users",
   description:
-    "Already using Jobber to run your contracting business? Here's what we configure, what we don't touch, and why job costing still requires our install even with Jobber.",
+    "Already using Jobber? Here's what we configure, what we don't touch, and why job costing still requires our install even with Jobber.",
   alternates: {
     canonical: `${siteConfig.siteUrl}/platforms/jobber`,
   },
@@ -215,14 +216,12 @@ export default function JobberPage() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-              <a
-                href={siteConfig.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <BookCallLink
+                source="platform-jobber"
                 className="inline-block bg-amber-500 text-black font-bold text-sm tracking-wide px-8 py-4 hover:bg-amber-400 transition-colors text-center"
               >
                 Book a Call
-              </a>
+              </BookCallLink>
               <Link
                 href="/offer"
                 className="inline-block border border-amber-500 text-amber-500 font-bold text-sm tracking-wide px-8 py-4 hover:bg-amber-500/10 transition-colors text-center"

@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { BookCallLink } from "@/components/ui/BookCallLink";
 
 export const metadata: Metadata = {
-  title: "Job Costing for QuickBooks Users — QuickBooks ProAdvisor Gold",
+  title: "QuickBooks Job Costing — ProAdvisor Gold",
   description:
     "QuickBooks ProAdvisor Gold firm. We configure job costing inside your QB file and can provision and manage QBO, QB Payments, QB Payroll, and QB Time.",
   alternates: {
@@ -398,14 +399,12 @@ export default function QuickBooksPage() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-              <a
-                href={siteConfig.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <BookCallLink
+                source="platform-qb"
                 className="inline-block bg-amber-500 text-black font-bold text-sm tracking-wide px-8 py-4 hover:bg-amber-400 transition-colors text-center"
               >
                 Book a Call
-              </a>
+              </BookCallLink>
               <Link
                 href="/offer"
                 className="inline-block border border-amber-500 text-amber-500 font-bold text-sm tracking-wide px-8 py-4 hover:bg-amber-500/10 transition-colors text-center"

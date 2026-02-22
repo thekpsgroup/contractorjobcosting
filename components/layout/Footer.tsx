@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
+import { BookCallLink } from "@/components/ui/BookCallLink";
 
 const mainLinks = [
   { href: "/offer", label: "The Offer" },
@@ -36,14 +37,12 @@ export function Footer() {
               contractors. Fixed-scope. Real results.
             </p>
             <div className="mt-6">
-              <a
-                href={siteConfig.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <BookCallLink
+                source="footer"
                 className="inline-block bg-amber-500 text-black font-bold text-xs tracking-wide px-5 py-2.5 hover:bg-amber-400 transition-colors"
               >
                 Book a Call
-              </a>
+              </BookCallLink>
             </div>
           </div>
 

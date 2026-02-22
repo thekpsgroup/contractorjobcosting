@@ -13,9 +13,9 @@ export function ContactForm() {
   );
   const formRef = useRef<HTMLFormElement>(null);
 
-  // Fire GA event on success
+  // Fire GA event on success — only when analytics is configured
   useEffect(() => {
-    if (state.status === "success") {
+    if (state.status === "success" && process.env.NEXT_PUBLIC_GA_ID) {
       sendGAEvent("event", "form_submit_success");
     }
   }, [state.status]);
@@ -72,6 +72,7 @@ export function ContactForm() {
       {/* Error state */}
       {state.status === "error" && (
         <div
+          id="form-error"
           role="alert"
           aria-live="assertive"
           className="mb-6 border border-error bg-error/5 p-4"
@@ -95,6 +96,8 @@ export function ContactForm() {
               name="name"
               required
               autoComplete="name"
+              aria-invalid={state.status === "error" || undefined}
+              aria-describedby={state.status === "error" ? "form-error" : undefined}
               className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
               placeholder="Your name"
             />
@@ -126,6 +129,8 @@ export function ContactForm() {
               name="email"
               required
               autoComplete="email"
+              aria-invalid={state.status === "error" || undefined}
+              aria-describedby={state.status === "error" ? "form-error" : undefined}
               className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
               placeholder="you@company.com"
             />
@@ -155,6 +160,8 @@ export function ContactForm() {
             name="message"
             required
             rows={5}
+            aria-invalid={state.status === "error" || undefined}
+            aria-describedby={state.status === "error" ? "form-error" : undefined}
             className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors resize-y min-h-30"
             placeholder="Tell us briefly about your business and what you're trying to solve."
           />
