@@ -6,6 +6,15 @@ import { submitContact, type FormState } from "@/app/contact/actions";
 
 const initialState: FormState = { status: "idle" };
 
+/** Returns aria-invalid + aria-describedby for a specific field. */
+function fieldAriaProps(state: FormState, fieldName: string) {
+  const hasFieldError = state.status === "error" && state.field === fieldName;
+  return {
+    "aria-invalid": hasFieldError || undefined,
+    "aria-describedby": hasFieldError ? `${fieldName}-error` : undefined,
+  };
+}
+
 export function ContactForm() {
   const [state, action, isPending] = useActionState<FormState, FormData>(
     submitContact,
@@ -67,10 +76,13 @@ export function ContactForm() {
     );
   }
 
+  // General (non-field) error — email send failure, etc.
+  const hasGeneralError = state.status === "error" && !state.field;
+
   return (
     <form ref={formRef} action={action} noValidate>
-      {/* Error state */}
-      {state.status === "error" && (
+      {/* General error — shown when no specific field is identified */}
+      {hasGeneralError && (
         <div
           id="form-error"
           role="alert"
@@ -78,7 +90,7 @@ export function ContactForm() {
           className="mb-6 border border-error bg-error/5 p-4"
         >
           <p className="text-error text-sm font-medium">
-            {state.message}
+            {state.status === "error" && state.message}
           </p>
         </div>
       )}
@@ -96,11 +108,15 @@ export function ContactForm() {
               name="name"
               required
               autoComplete="name"
-              aria-invalid={state.status === "error" || undefined}
-              aria-describedby={state.status === "error" ? "form-error" : undefined}
+              {...fieldAriaProps(state, "name")}
               className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
               placeholder="Your name"
             />
+            {state.status === "error" && state.field === "name" && (
+              <p id="name-error" className="mt-1.5 text-error text-xs">
+                {state.message}
+              </p>
+            )}
           </div>
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-fg mb-2">
@@ -129,11 +145,15 @@ export function ContactForm() {
               name="email"
               required
               autoComplete="email"
-              aria-invalid={state.status === "error" || undefined}
-              aria-describedby={state.status === "error" ? "form-error" : undefined}
+              {...fieldAriaProps(state, "email")}
               className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
               placeholder="you@company.com"
             />
+            {state.status === "error" && state.field === "email" && (
+              <p id="email-error" className="mt-1.5 text-error text-xs">
+                {state.message}
+              </p>
+            )}
           </div>
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-fg mb-2">
@@ -144,9 +164,15 @@ export function ContactForm() {
               id="phone"
               name="phone"
               autoComplete="tel"
+              {...fieldAriaProps(state, "phone")}
               className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors"
               placeholder="(555) 000-0000"
             />
+            {state.status === "error" && state.field === "phone" && (
+              <p id="phone-error" className="mt-1.5 text-error text-xs">
+                {state.message}
+              </p>
+            )}
           </div>
         </div>
 
@@ -160,11 +186,15 @@ export function ContactForm() {
             name="message"
             required
             rows={5}
-            aria-invalid={state.status === "error" || undefined}
-            aria-describedby={state.status === "error" ? "form-error" : undefined}
+            {...fieldAriaProps(state, "message")}
             className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors resize-y min-h-30"
             placeholder="Tell us briefly about your business and what you're trying to solve."
           />
+          {state.status === "error" && state.field === "message" && (
+            <p id="message-error" className="mt-1.5 text-error text-xs">
+              {state.message}
+            </p>
+          )}
         </div>
 
         {/* Honeypot — hidden from real users, visible to bots */}

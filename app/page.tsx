@@ -194,7 +194,7 @@ export default function HomePage() {
               <h2 className="text-headline text-fg mb-8">
                 Built for contractors who run serious businesses.
               </h2>
-              <ul className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-2">
                 {[
                   "$750K–$8M in annual revenue",
                   "Owner-led — you're in the business every day",
@@ -202,9 +202,9 @@ export default function HomePage() {
                   "You're too busy to hire a CFO but can't keep running blind",
                   "You're willing to share your numbers and show up to a weekly call",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
+                  <li key={item} className="flex items-start gap-3 bg-amber-500/5 border border-amber-500/15 px-4 py-3">
                     <span
-                      className="mt-1 w-4 h-4 shrink-0 bg-amber-500/20 border border-amber-500/40 flex items-center justify-center"
+                      className="mt-0.5 w-4 h-4 shrink-0 bg-amber-500/20 border border-amber-500/40 flex items-center justify-center"
                       aria-hidden="true"
                     >
                       <svg
@@ -238,19 +238,20 @@ export default function HomePage() {
               <h2 className="text-headline text-fg mb-8">
                 We&apos;re direct about who this isn&apos;t for.
               </h2>
-              <ul className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-2">
                 {[
                   "Won't share financial data — we can't build a system we can't see",
                   "Can't commit to a weekly call — the cadence is the product",
                   "Looking for free advice without implementation",
                   "Need bookkeeping cleanup first (we can refer you)",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
+                  <li key={item} className="flex items-start gap-3 bg-surface border border-line px-4 py-3">
                     <span
-                      className="mt-1 w-4 h-4 shrink-0 bg-line border border-line flex items-center justify-center"
+                      className="mt-0.5 w-4 h-4 shrink-0 bg-line border border-line flex items-center justify-center"
                       aria-hidden="true"
                     >
                       <svg
+                        className="text-muted-2"
                         width="10"
                         height="10"
                         viewBox="0 0 10 10"

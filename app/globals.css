@@ -136,6 +136,12 @@ body {
   margin-bottom: 1.5rem;
 }
 
+/* ─── Form validation state ────────────────────────────────────────────────── */
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: var(--color-error) !important;
+}
+
 /* ─── Prose-ish body text ──────────────────────────────────────────────────── */
 .prose-contractor p {
   color: var(--color-muted);

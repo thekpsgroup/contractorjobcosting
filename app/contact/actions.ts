@@ -8,7 +8,7 @@ import { sendContactEmail } from "@/lib/email";
 export type FormState =
   | { status: "idle" }
   | { status: "success" }
-  | { status: "error"; message: string }
+  | { status: "error"; field?: string; message: string }
   | { status: "rate_limited" };
 
 /** Safely extract the origin from a URL string; returns null on parse failure. */
@@ -84,8 +84,12 @@ export async function submitContact(
   const parsed = contactSchema.safeParse(raw);
 
   if (!parsed.success) {
-    const firstError = parsed.error.errors[0]?.message ?? "Please check your input and try again.";
-    return { status: "error", message: firstError };
+    const firstZodError = parsed.error.errors[0];
+    return {
+      status: "error",
+      field: firstZodError?.path[0]?.toString(),
+      message: firstZodError?.message ?? "Please check your input and try again.",
+    };
   }
 
   const { name, company, email, phone, message } = parsed.data;
