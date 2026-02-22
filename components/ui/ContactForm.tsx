@@ -155,7 +155,7 @@ export function ContactForm() {
             name="message"
             required
             rows={5}
-            className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors resize-y min-h-[120px]"
+            className="w-full bg-surface border border-line text-fg text-sm px-4 py-3 placeholder:text-muted-2 focus:outline-none focus:border-amber-500 transition-colors resize-y min-h-30"
             placeholder="Tell us briefly about your business and what you're trying to solve."
           />
         </div>

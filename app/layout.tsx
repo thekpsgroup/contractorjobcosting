@@ -113,6 +113,13 @@ const organizationSchema = {
   currenciesAccepted: "USD",
   paymentAccepted: "Invoice",
   serviceType: ["Job Costing", "Cash Flow Management", "Business Financial Systems"],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Dallas",
+    addressRegion: "TX",
+    addressCountry: "US",
+  },
+  image: `${siteConfig.siteUrl}/opengraph-image`,
   areaServed: {
     "@type": "Country",
     name: "United States",
