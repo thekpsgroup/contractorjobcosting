@@ -17,9 +17,6 @@ export const metadata: Metadata = {
     description:
       "Job costing and cash flow implementation for owner-led contractors. Fixed-scope 30-day install.",
   },
-  verification: {
-    google: "UWNdf7a2hFdMKwX-q-QyuFj5InuKBXEMfUewBbYxpMs",
-  },
 };
 
 const homePageSchema = {

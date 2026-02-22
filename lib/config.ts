@@ -38,9 +38,10 @@ export const siteConfig = {
   // Set NEXT_PUBLIC_GA_ID in Vercel env vars to enable Google Analytics
   analyticsId: process.env.NEXT_PUBLIC_GA_ID ?? "",
 
-  // Set NEXT_PUBLIC_SEARCH_CONSOLE_VERIFICATION in Vercel env vars
+  // Set NEXT_PUBLIC_SEARCH_CONSOLE_VERIFICATION in Vercel env vars (or leave as default below)
   searchConsoleVerification:
-    process.env.NEXT_PUBLIC_SEARCH_CONSOLE_VERIFICATION ?? "",
+    process.env.NEXT_PUBLIC_SEARCH_CONSOLE_VERIFICATION ??
+    "UWNdf7a2hFdMKwX-q-QyuFj5InuKBXEMfUewBbYxpMs",
 
   // ─── Affiliate / referral links ────────────────────────────────────────────
   // PartnerStack referral links for Jobber and Housecall Pro.
