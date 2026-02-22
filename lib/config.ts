@@ -17,8 +17,9 @@ export const siteConfig = {
     "Job costing and cash flow implementation for owner-led contractors doing $750K–$8M/year. Fixed-scope 30-day install. Real numbers, real margin clarity.",
 
   // ─── URLs ──────────────────────────────────────────────────────────────────
+  // www is canonical — apex redirects to www (Vercel). Keep env var aligned.
   siteUrl:
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://contractorjobcosting.com",
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.contractorjobcosting.com",
 
   // ─── Contact (update these before launch) ──────────────────────────────────
   phone: "(469) 534-3392",

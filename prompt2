@@ -1,0 +1,100 @@
+You are Claude (best available model). You are acting as a senior technical SEO + web platform auditor. Your job is to determine—based on verifiable evidence only—what is correct/incorrect on https://www.contractorjobcosting.com and then implement precise fixes in the codebase.
+
+Hard rule: DO NOT GUESS. If you cannot verify something by inspecting the live site responses or repo, explicitly say “Not verifiable with available evidence” and state what evidence would be required.
+
+# Inputs you have
+- Live site URL: https://www.contractorjobcosting.com
+- A local repo checkout exists (assume you can read and edit files, run builds/tests, and run curl).
+- Hosting is already working; env vars are configured somewhere. You must not assume which host vendor is used unless you can prove it from headers or config files.
+
+# What you must do
+1) Crawl and inspect all public pages in the sitemap (and any other discoverable pages).
+2) Audit every page for:
+   - HTTP status codes (200/3xx) and redirect permanence (use 301/308, not 302/307, unless temporary is explicitly intended)
+   - canonical host consistency (www vs apex)
+   - title tags, meta descriptions, robots directives
+   - canonical link tags
+   - OpenGraph/Twitter tags
+   - headings (H1 presence and hierarchy)
+   - internal linking + nav/footers consistency
+   - structured data (JSON-LD): validity + appropriateness + no spam
+   - sitemap.xml + robots.txt correctness (host alignment, blocks, sitemap location)
+   - accessibility basics (semantic landmarks, focus states, form labels/errors)
+   - performance hazards you can verify from markup/build output (heavy scripts, render-blocking, large images, etc.)
+3) Audit conversion plumbing:
+   - booking link configuration (single source of truth)
+   - contact form endpoint exists, validates inputs, spam controls (honeypot + rate limiting best-effort), no PII logs
+   - email sending is configured via env vars; ensure failure mode is safe and returns correct status
+4) Audit analytics:
+   - analytics tag installed only when configured
+   - events fire for: book_call_click, form_submit_success
+5) Affiliate compliance:
+   - Wherever referral links appear, disclosure is visible near the link:
+     “Disclosure: We may earn a referral commission at no additional cost to you.”
+   - Do not claim official/certified/authorized partner status.
+
+# Specific issue you MUST validate and fix if present
+We have evidence (from curl output) that:
+- https://contractorjobcosting.com returns a 307 redirect to https://www.contractorjobcosting.com/
+- robots.txt + sitemap.xml appear to reference the apex domain (contractorjobcosting.com) in sitemap/host directives.
+
+You must confirm this on the live site and then fix the site so that:
+- ONE canonical host is chosen (either www or apex), and ALL of:
+  - redirects
+  - sitemap <loc> URLs
+  - robots.txt sitemap directive
+  - canonical tags
+  - OpenGraph URLs
+  - internal links
+  are aligned to that canonical host.
+
+If www is canonical, apex should 301/308 to www (permanent). If apex is canonical, www should 301/308 to apex.
+
+Additionally:
+- Remove any non-standard or confusing directives in robots.txt (e.g., Host:) unless you can justify them with a search-engine standard reference.
+- Ensure sitemap URLs are the canonical URLs.
+
+# How you should inspect (commands you must run and base findings on)
+Run these and record results:
+- curl -I for both hosts and key pages
+- fetch and parse robots.txt and sitemap.xml from the canonical host
+- fetch HTML of each key page and extract:
+  - <title>
+  - meta description
+  - meta robots
+  - canonical link
+  - OG/Twitter tags
+  - JSON-LD blocks
+- Validate JSON-LD (at minimum: parseable JSON, correct @context, sensible types)
+
+At minimum, inspect these URLs:
+- /
+- /offer
+- /proof
+- /about
+- /contact
+- /platforms/jobber
+- /platforms/housecall-pro
+- /platforms/quickbooks
+and anything in sitemap.xml.
+
+# Deliverables (your output)
+A) A precise audit report with:
+- a table per URL: status, canonical, title, description, indexability, schema presence, issues, severity (P0/P1/P2), exact fix
+B) A concrete fix implementation:
+- Provide a patch/diff or list of file edits with exact code changes
+- Update robots.txt and sitemap generation if needed
+- Update redirect rules to use 301/308 as appropriate
+- Ensure build passes
+C) A short verification checklist:
+- exact curl commands to confirm redirect/host/sitemap alignment after deployment
+- what to check in Search Console
+
+# Standards / judgment calls
+Use 2026 standards, but only cite what you can verify. Treat Google’s public technical SEO guidance and Core Web Vitals definitions as the baseline for “pass/fail” statements.
+
+Now start:
+1) Determine canonical host strategy based on current behavior and best practice.
+2) Produce the audit report.
+3) Implement fixes.
+4) Provide verification commands.
