@@ -13,6 +13,13 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()",
           },
+          // HSTS — 2 years, subdomains, preload-eligible
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
+          },
+          // Allow browser DNS prefetching (speeds up external links)
+          { key: "X-DNS-Prefetch-Control", value: "on" },
         ],
       },
     ];

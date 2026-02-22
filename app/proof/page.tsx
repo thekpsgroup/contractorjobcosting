@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/config";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Outcomes — What Contractors See After the Job Costing Install",
@@ -16,9 +17,59 @@ export const metadata: Metadata = {
   },
 };
 
+const outcomeListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${siteConfig.siteUrl}/proof#itemlist`,
+  name: "Contractor Job Costing Outcome Examples",
+  description:
+    "Real outcome scenarios from contractors who completed the 30-day job costing install — margin clarity, faster invoicing, and profit leak identification.",
+  url: `${siteConfig.siteUrl}/proof`,
+  numberOfItems: 3,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Article",
+        name: "Electrical Contractor — Per-Crew Profit Visibility",
+        headline: "We had no idea which crews were profitable.",
+        description:
+          "An electrical contractor running four crews had flat margins despite growing revenue. After the install, per-crew job costing revealed service labor underpricing was masking losses. Gross margin on service work improved approximately 8 points within the following quarter.",
+        about: { "@id": `${siteConfig.siteUrl}/#organization` },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Article",
+        name: "Residential Remodeler — Invoice Lag Reduced from 38 to 9 Days",
+        headline: "We were invoicing 30–45 days after job completion.",
+        description:
+          "A residential remodeler with a strong pipeline had a cash flow problem — invoices went out 30–45 days after job completion. After implementing a milestone-based billing cadence and progress billing trigger, average invoice lag dropped from 38 days to 9 days within two billing cycles.",
+        about: { "@id": `${siteConfig.siteUrl}/#organization` },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Article",
+        name: "HVAC Contractor — Materials Losses Found in Overhead",
+        headline: "Materials losses were buried in overhead. We didn't know.",
+        description:
+          "An HVAC contractor saw consistently thin margins on new installations despite competitive estimates. Job costing rules requiring materials coded to specific jobs revealed field crews were pulling parts that never made it to the job cost record. Installation margins recovered without any change to pricing.",
+        about: { "@id": `${siteConfig.siteUrl}/#organization` },
+      },
+    },
+  ],
+};
+
 export default function ProofPage() {
   return (
     <>
+      <JsonLd data={outcomeListSchema} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-[var(--color-line)]">
         <div className="container">

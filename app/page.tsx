@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Contractor Job Costing — Know Your Margin in 30 Days",
@@ -17,9 +18,31 @@ export const metadata: Metadata = {
   },
 };
 
+const homePageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${siteConfig.siteUrl}/#webpage`,
+  name: "Contractor Job Costing — Know Your Margin in 30 Days",
+  url: siteConfig.siteUrl,
+  description:
+    "Job costing and cash flow implementation for owner-led contractors doing $750K–$8M/year. Fixed-scope 30-day install. Find your profit leaks. Get paid faster.",
+  inLanguage: "en-US",
+  isPartOf: { "@id": `${siteConfig.siteUrl}/#website` },
+  about: { "@id": `${siteConfig.siteUrl}/#organization` },
+  potentialAction: {
+    "@type": "ReserveAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: siteConfig.bookingUrl,
+    },
+    name: "Book a Discovery Call",
+  },
+};
+
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={homePageSchema} />
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-[var(--color-line)]">
         <div className="container">

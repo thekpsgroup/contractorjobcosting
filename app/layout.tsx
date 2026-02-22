@@ -168,6 +168,15 @@ export default function RootLayout({
       <head>
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <meta name="format-detection" content="telephone=no" />
+        {/* ── Geo / local SEO ──────────────────────────────────────────── */}
+        <meta name="geo.region" content="US-TX" />
+        <meta name="geo.placename" content="Dallas, Texas" />
+        <meta name="geo.position" content="32.7767;-96.7970" />
+        <meta name="ICBM" content="32.7767, -96.7970" />
+        {/* ── Resource hints ───────────────────────────────────────────── */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://calendly.com" />
       </head>
       <body className="flex flex-col min-h-dvh">
         {/* Skip to main content — keyboard accessibility */}
