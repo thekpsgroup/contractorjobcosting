@@ -326,6 +326,14 @@ export default function OfferPage() {
                 Outcomes listed are typical, not guaranteed. Results depend on
                 your data quality and participation.
               </p>
+              <div className="mt-6">
+                <Link
+                  href="/proof"
+                  className="text-amber-500 text-sm font-bold hover:text-amber-400 transition-colors"
+                >
+                  Read detailed contractor outcome examples &rarr;
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -376,6 +384,42 @@ export default function OfferPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Cross-links ────────────────────────────────────────────────── */}
+      <section className="section border-b border-line">
+        <div className="container">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="border border-line p-6">
+              <p className="text-muted text-sm leading-relaxed mb-3">
+                If your margins are unclear because operations are chaotic, you
+                may need the ops layer first.
+              </p>
+              <a
+                href="https://contractorscoo.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=offer-crosslink"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-500 text-sm font-bold hover:text-amber-400 transition-colors"
+              >
+                Contractors COO Install &rarr;
+              </a>
+            </div>
+            <div className="border border-line p-6">
+              <p className="text-muted text-sm leading-relaxed mb-3">
+                If your entity structure or accounting foundation isn&apos;t set,
+                start there.
+              </p>
+              <a
+                href="https://contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=offer-crosslink"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-500 text-sm font-bold hover:text-amber-400 transition-colors"
+              >
+                Contractor Setup Install &rarr;
+              </a>
+            </div>
           </div>
         </div>
       </section>

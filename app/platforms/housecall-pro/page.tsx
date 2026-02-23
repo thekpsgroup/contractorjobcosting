@@ -5,9 +5,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { BookCallLink } from "@/components/ui/BookCallLink";
 
 export const metadata: Metadata = {
-  title: "Job Costing for Housecall Pro Users",
+  title: "Housecall Pro Job Costing Setup",
   description:
-    "Using Housecall Pro to run your contracting business? Here's what we configure on top of HCP, what we don't touch, and why you still need a job costing install.",
+    "Using Housecall Pro? We install job costing on top of your HCP setup — scoreboard, rules, and weekly profit meeting — in 30 days.",
   alternates: {
     canonical: `${siteConfig.siteUrl}/platforms/housecall-pro`,
   },

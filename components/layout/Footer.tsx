@@ -15,6 +15,17 @@ const platformLinks = [
   { href: "/platforms/quickbooks", label: "QuickBooks" },
 ];
 
+const networkLinks = [
+  {
+    href: "https://contractorscoo.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network",
+    label: "Contractors COO Install",
+  },
+  {
+    href: "https://contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network",
+    label: "Contractor Setup Install",
+  },
+];
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -108,6 +119,27 @@ export function Footer() {
               </ul>
             </div>
           </div>
+        </div>
+
+        {/* Other installs (cross-site network) */}
+        <div className="border-t border-line pt-8 mb-8">
+          <p className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-3">
+            Other Installs by The KPS Group
+          </p>
+          <ul className="flex flex-wrap gap-x-6 gap-y-1.5">
+            {networkLinks.map(({ href, label }) => (
+              <li key={href}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-2 text-xs hover:text-fg transition-colors"
+                >
+                  {label} &rarr;
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Bottom bar */}

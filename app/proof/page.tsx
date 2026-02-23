@@ -385,6 +385,26 @@ export default function ProofPage() {
         </div>
       </section>
 
+      {/* ── Cross-link ───────────────────────────────────────────────── */}
+      <section className="section border-b border-line">
+        <div className="container">
+          <div className="border border-line p-6 max-w-lg">
+            <p className="text-muted text-sm leading-relaxed mb-3">
+              If your entity structure or accounting foundation isn&apos;t solid
+              yet, that&apos;s the first step.
+            </p>
+            <a
+              href="https://contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=proof-crosslink"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-500 text-sm font-bold hover:text-amber-400 transition-colors"
+            >
+              Contractor Setup Install &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
       <section className="bg-amber-500 py-16 px-6">
         <div className="container text-center">
@@ -401,6 +421,16 @@ export default function ProofPage() {
           >
             Book a Call
           </BookCallLink>
+          <p className="mt-6 text-black/60 text-sm">
+            Not ready to call?{" "}
+            <Link
+              href="/contact"
+              className="font-bold text-black/80 underline hover:text-black transition-colors"
+            >
+              Send us a message
+            </Link>
+            .
+          </p>
         </div>
       </section>
     </>

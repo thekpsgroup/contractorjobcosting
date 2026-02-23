@@ -5,9 +5,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { BookCallLink } from "@/components/ui/BookCallLink";
 
 export const metadata: Metadata = {
-  title: "Job Costing for Jobber Users",
+  title: "Jobber Job Costing Setup",
   description:
-    "Already using Jobber? Here's what we configure, what we don't touch, and why job costing still requires our install even with Jobber.",
+    "Already on Jobber? We configure job costing on top of your existing setup — scoreboard, rules, and meeting cadence — in 30 days.",
   alternates: {
     canonical: `${siteConfig.siteUrl}/platforms/jobber`,
   },

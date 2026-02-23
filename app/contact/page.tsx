@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { BookCallLink } from "@/components/ui/BookCallLink";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Contact — Contractor Job Costing",
+  title: "Contact Us",
   description:
     "Book a call, send a message, or reach us directly by phone or email. We respond to every inquiry within one business day.",
   alternates: {
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: `${siteConfig.siteUrl}/contact`,
-    title: "Contact — Contractor Job Costing",
+    title: "Contact Contractor Job Costing",
     description:
       "Book a call or send us a message. We respond to every inquiry within one business day.",
   },
@@ -134,6 +135,27 @@ export default function ContactPage() {
               <ContactForm />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Not sure yet ─────────────────────────────────────────────────── */}
+      <section className="section border-b border-line bg-surface">
+        <div className="container flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <div>
+            <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-2">
+              Not Sure Yet?
+            </p>
+            <p className="text-muted text-sm max-w-md">
+              See exactly what gets installed, what we need from you, and how
+              the 30-day scope works.
+            </p>
+          </div>
+          <Link
+            href="/offer"
+            className="shrink-0 inline-block border border-amber-500 text-amber-500 font-bold text-sm tracking-wide px-8 py-4 hover:bg-amber-500/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas whitespace-nowrap"
+          >
+            Read the Full Offer &rarr;
+          </Link>
         </div>
       </section>
     </>

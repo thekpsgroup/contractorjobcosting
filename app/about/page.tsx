@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { BookCallLink } from "@/components/ui/BookCallLink";
 
 export const metadata: Metadata = {
-  title: "About Contractor Job Costing",
+  title: "About Us — The KPS Group",
   description:
     "Contractor Job Costing is a service of The KPS Group. We build job costing and cash flow systems for owner-led contractors to run on real numbers.",
   alternates: {
@@ -43,7 +43,7 @@ export default function AboutPage() {
             About
           </p>
           <h1 className="text-display text-fg mb-6 max-w-3xl">
-            Built for contractors who run serious businesses.
+            The KPS Group — built on real contractor numbers.
           </h1>
           <p className="text-subhead text-muted max-w-2xl">
             Contractor Job Costing is a service of The KPS Group.
