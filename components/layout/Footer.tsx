@@ -17,12 +17,14 @@ const platformLinks = [
 
 const networkLinks = [
   {
-    href: "https://www.contractorscoo.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network",
-    label: "Contractors COO Install",
-  },
-  {
     href: "https://www.contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network",
     label: "Contractor Setup Install",
+    description: "Foundation install for new contractors. Entity, banking, books, operating rhythm.",
+  },
+  {
+    href: "https://www.contractorscoo.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network",
+    label: "Contractors COO Install",
+    description: "Operations leadership for $1M–$10M teams. Cadence, accountability, execution rhythm.",
   },
 ];
 
@@ -123,23 +125,37 @@ export function Footer() {
 
         {/* Other installs (cross-site network) */}
         <div className="border-t border-line pt-8 mb-8">
-          <p className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-3">
-            Other Installs by The KPS Group
+          <p className="text-muted-2 text-xs font-bold tracking-widest uppercase mb-4">
+            The KPS Group Service Ecosystem
           </p>
-          <ul className="flex flex-wrap gap-x-6 gap-y-1.5">
-            {networkLinks.map(({ href, label }) => (
-              <li key={href}>
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-2 text-xs hover:text-fg transition-colors"
-                >
-                  {label} &rarr;
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="space-y-3">
+            <div>
+              <a
+                href="https://www.contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-2 text-xs hover:text-fg transition-colors font-semibold"
+              >
+                Contractor Setup Install →
+              </a>
+              <p className="text-muted-2 text-xs mt-1">Foundation install for new contractors. Entity, banking, books, operating rhythm.</p>
+            </div>
+            <div>
+              <span className="text-muted-2 text-xs font-semibold">Contractor Job Costing</span>
+              <p className="text-muted-2 text-xs mt-1">Job costing & cash flow for $750K–$8M contractors. Know your margin. Fix your cash flow.</p>
+            </div>
+            <div>
+              <a
+                href="https://www.contractorscoo.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-2 text-xs hover:text-fg transition-colors font-semibold"
+              >
+                Contractors COO Install →
+              </a>
+              <p className="text-muted-2 text-xs mt-1">Operations leadership for $1M–$10M teams. Cadence, accountability, execution rhythm.</p>
+            </div>
+          </div>
         </div>
 
         {/* Bottom bar */}

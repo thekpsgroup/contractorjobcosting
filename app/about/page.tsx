@@ -210,6 +210,51 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── SERVICE ECOSYSTEM ────────────────── */}
+      <section aria-label="Service progression" className="section border-b border-line">
+        <div className="container">
+          <h2 className="text-2xl font-bold text-fg mb-12 max-w-3xl">
+            Part of a Complete System
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="border-l-4 border-amber-400 pl-6">
+              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-3">
+                Stage 1: Foundation
+              </p>
+              <h3 className="font-bold text-fg mb-3">Contractor Setup Install</h3>
+              <p className="text-muted text-sm leading-relaxed mb-4">
+                Gets new contractors off to the right start. Entity structure, banking, books, and the barebone operating rhythm.
+              </p>
+              <a href="https://www.contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral" target="_blank" rel="noopener noreferrer" className="text-amber-500 text-sm font-bold hover:text-amber-400">
+                Learn more →
+              </a>
+            </div>
+            <div className="border-l-4 border-amber-400 pl-6">
+              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-3">
+                Stage 2: Financial Clarity
+              </p>
+              <h3 className="font-bold text-fg mb-3">Contractor Job Costing</h3>
+              <p className="text-muted text-sm leading-relaxed mb-4">
+                Real margin numbers and cash flow fixes. Built for $750K–$8M contractors who need to know what's profitable.
+              </p>
+              <span className="text-muted text-sm font-bold">You are here</span>
+            </div>
+            <div className="border-l-4 border-amber-400 pl-6">
+              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-3">
+                Stage 3: Operations Leadership
+              </p>
+              <h3 className="font-bold text-fg mb-3">Contractors COO</h3>
+              <p className="text-muted text-sm leading-relaxed mb-4">
+                The execution infrastructure your team needs to scale past the owner-operator model. Built for $1M–$10M contractors.
+              </p>
+              <a href="https://www.contractorscoo.com/?utm_source=contractorjobcosting&utm_medium=referral" target="_blank" rel="noopener noreferrer" className="text-amber-500 text-sm font-bold hover:text-amber-400">
+                Learn more →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
       <section className="section bg-surface">
         <div className="container">

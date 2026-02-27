@@ -389,6 +389,51 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── SERVICE ECOSYSTEM ─────────────────────────────────────────────── */}
+      <section className="section border-b border-line bg-surface">
+        <div className="container">
+          <h2 className="text-2xl font-bold text-fg mb-12 max-w-2xl">
+            Have your foundation in place but need margin clarity?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-3">
+                Stage 1: Foundation
+              </p>
+              <h3 className="font-bold text-fg mb-3">Contractor Setup Install</h3>
+              <p className="text-muted text-sm leading-relaxed mb-4">
+                Entity, banking, books, and operating rhythm properly installed in 21 days. The foundation most contractors never get right.
+              </p>
+              <a href="https://www.contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral" target="_blank" rel="noopener noreferrer" className="text-amber-500 text-sm font-bold hover:text-amber-400 flex items-center gap-2">
+                Visit Site →
+              </a>
+            </div>
+            <div>
+              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-3">
+                Stage 2: Financial Clarity
+              </p>
+              <h3 className="font-bold text-fg mb-3">Contractor Job Costing</h3>
+              <p className="text-muted text-sm leading-relaxed mb-4">
+                Real margin numbers and cash flow visibility for contractors doing $750K–$8M. This is where you get the numbers that drive every other decision.
+              </p>
+              <span className="text-muted text-sm font-bold">You are here →</span>
+            </div>
+            <div>
+              <p className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-3">
+                Stage 3: Operations Leadership
+              </p>
+              <h3 className="font-bold text-fg mb-3">Contractors COO</h3>
+              <p className="text-muted text-sm leading-relaxed mb-4">
+                Once you know your margins, the next question is operations. COO is for contractors doing $1M–$10M who need infrastructure to scale.
+              </p>
+              <a href="https://www.contractorscoo.com/?utm_source=contractorjobcosting&utm_medium=referral" target="_blank" rel="noopener noreferrer" className="text-amber-500 text-sm font-bold hover:text-amber-400">
+                Learn more →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Bottom CTA Band ───────────────────────────────────────────────── */}
       <section className="bg-amber-500 py-16 px-6">
         <div className="container text-center">
