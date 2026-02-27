@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description:
       "Done-for-you job costing implementation for owner-led contractors. Not a report. A working system.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Job Costing Consultant for Contractors",
+    description: "A job costing consultant for owner-led contractors. Fixed-scope 30-day install: profit scoreboard, costing rules, billing cadence, and weekly meeting.",
+  },
 };
 
 const faqs = [
@@ -100,10 +105,19 @@ const serviceSchema = {
   areaServed: { "@type": "Country", name: "United States" },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
+    { "@type": "ListItem", position: 2, name: "Job Costing Consultant", item: `${siteConfig.siteUrl}/job-costing-consultant` },
+  ],
+};
+
 export default function JobCostingConsultantPage() {
   return (
     <>
-      <JsonLd data={[serviceSchema, faqSchema]} />
+      <JsonLd data={[serviceSchema, faqSchema, breadcrumbSchema]} />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-line">

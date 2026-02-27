@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description:
       "A job costing system built for your business, not just another tool to learn. Installed in 30 days.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Job Costing System for Contractors",
+    description: "Not software — a complete job costing system. Scoreboard, rules, billing cadence, and weekly meeting installed in your contracting business in 30 days.",
+  },
 };
 
 const faqs = [
@@ -100,10 +105,19 @@ const serviceSchema = {
   areaServed: { "@type": "Country", name: "United States" },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
+    { "@type": "ListItem", position: 2, name: "Job Costing System", item: `${siteConfig.siteUrl}/contractor-job-costing-system` },
+  ],
+};
+
 export default function ContractorJobCostingSystemPage() {
   return (
     <>
-      <JsonLd data={[serviceSchema, faqSchema]} />
+      <JsonLd data={[serviceSchema, faqSchema, breadcrumbSchema]} />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-line">

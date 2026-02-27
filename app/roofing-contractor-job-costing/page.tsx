@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description:
       "Materials volatility, crew-based labor, and storm vs. routine margins. Job costing installed for roofers in 30 days.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Job Costing for Roofing Contractors",
+    description: "Job costing for roofing contractors. Materials tracking, crew labor by job, and per-job margin clarity — installed in your accounting setup in 30 days.",
+  },
 };
 
 const faqs = [
@@ -95,10 +100,19 @@ const serviceSchema = {
   areaServed: { "@type": "Country", name: "United States" },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
+    { "@type": "ListItem", position: 2, name: "Roofing Job Costing", item: `${siteConfig.siteUrl}/roofing-contractor-job-costing` },
+  ],
+};
+
 export default function RoofingContractorJobCostingPage() {
   return (
     <>
-      <JsonLd data={[serviceSchema, faqSchema]} />
+      <JsonLd data={[serviceSchema, faqSchema, breadcrumbSchema]} />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-line">

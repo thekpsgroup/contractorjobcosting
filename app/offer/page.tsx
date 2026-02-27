@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description:
       "Fixed-scope job costing implementation for owner-led contractors. Know your margin in 30 days.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "The 30-Day Job Costing Install",
+    description: "Fixed-scope job costing for contractors. Four deliverables in 30 days: profit scoreboard, costing rules, billing cadence, and weekly profit meeting.",
+  },
 };
 
 const faqs = [
@@ -140,10 +145,19 @@ const faqSchema = {
   })),
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
+    { "@type": "ListItem", position: 2, name: "Offer", item: `${siteConfig.siteUrl}/offer` },
+  ],
+};
+
 export default function OfferPage() {
   return (
     <>
-      <JsonLd data={[serviceSchema, faqSchema]} />
+      <JsonLd data={[serviceSchema, faqSchema, breadcrumbSchema]} />
 
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-line">
@@ -398,7 +412,7 @@ export default function OfferPage() {
                 may need the ops layer first.
               </p>
               <a
-                href="https://contractorscoo.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=offer-crosslink"
+                href="https://www.contractorscoo.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=offer-crosslink"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-500 text-sm font-bold hover:text-amber-400 transition-colors"
@@ -412,7 +426,7 @@ export default function OfferPage() {
                 start there.
               </p>
               <a
-                href="https://contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=offer-crosslink"
+                href="https://www.contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=offer-crosslink"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-500 text-sm font-bold hover:text-amber-400 transition-colors"

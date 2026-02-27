@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description:
       "Done-for-you job costing for contractors. Scoreboard, rules, billing cadence, and weekly profit meeting.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Construction Job Costing — Done For You",
+    description: "Construction job costing installed in your business in 30 days. We track labor, materials, and subs per job so you see gross profit — not just revenue.",
+  },
 };
 
 const faqs = [
@@ -100,10 +105,19 @@ const serviceSchema = {
   areaServed: { "@type": "Country", name: "United States" },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
+    { "@type": "ListItem", position: 2, name: "Construction Job Costing", item: `${siteConfig.siteUrl}/construction-job-costing` },
+  ],
+};
+
 export default function ConstructionJobCostingPage() {
   return (
     <>
-      <JsonLd data={[serviceSchema, faqSchema]} />
+      <JsonLd data={[serviceSchema, faqSchema, breadcrumbSchema]} />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-line">

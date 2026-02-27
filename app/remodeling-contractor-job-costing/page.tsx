@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description:
       "Change orders, milestone billing, and sub-heavy jobs require specific job costing. We install the system for remodelers in 30 days.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Job Costing for Remodeling Contractors",
+    description: "Job costing for residential remodeling contractors. Change order tracking, milestone billing, and per-job margin visibility — installed in 30 days.",
+  },
 };
 
 const faqs = [
@@ -90,10 +95,19 @@ const serviceSchema = {
   areaServed: { "@type": "Country", name: "United States" },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
+    { "@type": "ListItem", position: 2, name: "Remodeling Job Costing", item: `${siteConfig.siteUrl}/remodeling-contractor-job-costing` },
+  ],
+};
+
 export default function RemodelingContractorJobCostingPage() {
   return (
     <>
-      <JsonLd data={[serviceSchema, faqSchema]} />
+      <JsonLd data={[serviceSchema, faqSchema, breadcrumbSchema]} />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-line">

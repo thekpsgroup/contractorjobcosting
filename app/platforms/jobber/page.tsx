@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description:
       "Jobber tracks your jobs. Our install makes sure you know if you made money on them.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Jobber Job Costing Setup",
+    description: "Already on Jobber? We configure job costing on top of your existing setup — scoreboard, rules, and meeting cadence — in 30 days.",
+  },
 };
 
 const breadcrumbSchema = {

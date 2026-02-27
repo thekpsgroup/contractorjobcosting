@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description:
       "Fix contractor cash flow by fixing when you invoice. Billing cadence and AR system installed in 30 days.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Contractor Cash Flow Fix — Bill Faster, Get Paid Faster",
+    description: "Most contractor cash flow problems trace back to late invoicing, not revenue. We install the billing system that closes the gap between job completion and cash in your account.",
+  },
 };
 
 const faqs = [
@@ -95,10 +100,19 @@ const serviceSchema = {
   areaServed: { "@type": "Country", name: "United States" },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
+    { "@type": "ListItem", position: 2, name: "Contractor Cash Flow", item: `${siteConfig.siteUrl}/contractor-cash-flow` },
+  ],
+};
+
 export default function ContractorCashFlowPage() {
   return (
     <>
-      <JsonLd data={[serviceSchema, faqSchema]} />
+      <JsonLd data={[serviceSchema, faqSchema, breadcrumbSchema]} />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-line">

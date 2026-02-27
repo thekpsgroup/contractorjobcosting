@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description:
       "Contractor Job Costing is a service of The KPS Group. Built for owner-led contractors who are done guessing.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "About Us — The KPS Group",
+    description: "Contractor Job Costing is a service of The KPS Group. We build job costing and cash flow systems for owner-led contractors to run on real numbers.",
+  },
 };
 
 const aboutPageSchema = {
@@ -32,10 +37,19 @@ const aboutPageSchema = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
+    { "@type": "ListItem", position: 2, name: "About", item: `${siteConfig.siteUrl}/about` },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
-      <JsonLd data={aboutPageSchema} />
+      <JsonLd data={[aboutPageSchema, breadcrumbSchema]} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-line">
         <div className="container">

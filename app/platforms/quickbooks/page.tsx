@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     description:
       "QuickBooks ProAdvisor Gold firm. We configure job costing in your QB file and can provision and manage your QB subscriptions.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "QuickBooks Job Costing — ProAdvisor Gold",
+    description: "QuickBooks ProAdvisor Gold firm. We configure job costing inside your QB file and can provision and manage QBO, QB Payments, QB Payroll, and QB Time.",
+  },
 };
 
 const breadcrumbSchema = {

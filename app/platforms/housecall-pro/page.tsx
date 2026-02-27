@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description:
       "Housecall Pro manages your field ops. Our install makes sure you know if those jobs made money.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Housecall Pro Job Costing Setup",
+    description: "Using Housecall Pro? We install job costing on top of your HCP setup — scoreboard, rules, and weekly profit meeting — in 30 days.",
+  },
 };
 
 const breadcrumbSchema = {

@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description:
       "Outcome examples from contractor job costing installs. Not case studies with logos — real scenarios from real businesses.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Job Costing Outcomes for Contractors",
+    description: "Contractor outcomes after the job costing install. Margin clarity, faster invoicing, profit leak identification, and a weekly operating rhythm.",
+  },
 };
 
 const outcomeListSchema = {
@@ -74,10 +79,19 @@ const outcomeListSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
+    { "@type": "ListItem", position: 2, name: "Proof", item: `${siteConfig.siteUrl}/proof` },
+  ],
+};
+
 export default function ProofPage() {
   return (
     <>
-      <JsonLd data={outcomeListSchema} />
+      <JsonLd data={[outcomeListSchema, breadcrumbSchema]} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-line">
         <div className="container">
@@ -394,7 +408,7 @@ export default function ProofPage() {
               yet, that&apos;s the first step.
             </p>
             <a
-              href="https://contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=proof-crosslink"
+              href="https://www.contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=proof-crosslink"
               target="_blank"
               rel="noopener noreferrer"
               className="text-amber-500 text-sm font-bold hover:text-amber-400 transition-colors"

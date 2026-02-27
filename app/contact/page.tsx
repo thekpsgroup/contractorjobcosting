@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     description:
       "Book a call or send us a message. We respond to every inquiry within one business day.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Contact Us",
+    description: "Book a call, send a message, or reach us directly by phone or email. We respond to every inquiry within one business day.",
+  },
 };
 
 const contactPageSchema = {
@@ -32,10 +37,19 @@ const contactPageSchema = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
+    { "@type": "ListItem", position: 2, name: "Contact", item: `${siteConfig.siteUrl}/contact` },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <>
-      <JsonLd data={contactPageSchema} />
+      <JsonLd data={[contactPageSchema, breadcrumbSchema]} />
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <section className="section-lg border-b border-line">
         <div className="container">

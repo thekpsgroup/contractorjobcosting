@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description:
       "Job costing and cash flow implementation for owner-led contractors. Fixed-scope 30-day install.",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Contractor Job Costing — Know Your Margin in 30 Days",
+    description: "Job costing and cash flow implementation for owner-led contractors doing $750K–$8M/year. Fixed-scope 30-day install. Find your profit leaks. Get paid faster.",
+  },
 };
 
 const homePageSchema = {

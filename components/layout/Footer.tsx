@@ -17,11 +17,11 @@ const platformLinks = [
 
 const networkLinks = [
   {
-    href: "https://contractorscoo.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network",
+    href: "https://www.contractorscoo.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network",
     label: "Contractors COO Install",
   },
   {
-    href: "https://contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network",
+    href: "https://www.contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network",
     label: "Contractor Setup Install",
   },
 ];
