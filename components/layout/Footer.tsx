@@ -15,19 +15,6 @@ const platformLinks = [
   { href: "/platforms/quickbooks", label: "QuickBooks" },
 ];
 
-const networkLinks = [
-  {
-    href: "https://www.contractorsetup.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network",
-    label: "Contractor Setup Install",
-    description: "Foundation install for new contractors. Entity, banking, books, operating rhythm.",
-  },
-  {
-    href: "https://www.contractorscoo.com/?utm_source=contractorjobcosting&utm_medium=referral&utm_campaign=network",
-    label: "Contractors COO Install",
-    description: "Operations leadership for $1M–$10M teams. Cadence, accountability, execution rhythm.",
-  },
-];
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
 

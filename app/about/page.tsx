@@ -235,7 +235,7 @@ export default function AboutPage() {
               </p>
               <h3 className="font-bold text-fg mb-3">Contractor Job Costing</h3>
               <p className="text-muted text-sm leading-relaxed mb-4">
-                Real margin numbers and cash flow fixes. Built for $750K–$8M contractors who need to know what's profitable.
+                Real margin numbers and cash flow fixes. Built for $750K–$8M contractors who need to know what&apos;s profitable.
               </p>
               <span className="text-muted text-sm font-bold">You are here</span>
             </div>

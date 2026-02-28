@@ -129,7 +129,7 @@ export default function PrivacyPage() {
                 >
                   Google Analytics Opt-Out Browser Add-on
                 </a>
-                , or by adjusting your browser's cookie settings.
+                , or by adjusting your browser&apos;s cookie settings.
               </p>
             </div>
 
