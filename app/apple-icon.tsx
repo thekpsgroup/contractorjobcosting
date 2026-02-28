@@ -1,3 +1,4 @@
+/* eslint-disable no-inline-styles */
 import { ImageResponse } from 'next/og';
 
 export const runtime     = 'edge';
